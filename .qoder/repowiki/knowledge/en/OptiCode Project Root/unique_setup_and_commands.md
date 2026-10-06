@@ -1,1 +1,0 @@
-`npm run dev` starts the Vite dev server, `npm run build` produces the static bundle, `npm run preview` serves the built output locally, and `npm run lint` runs ESLint over the tree.

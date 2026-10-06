@@ -30,177 +30,149 @@
 9. [Conclusion](#conclusion)
 
 ## Introduction
-OptiCode is a single-page marketing landing page for the JOVI smartphone product, built with React and Vite and styled with Tailwind CSS. The application presents a cohesive user experience through clearly defined sections: hero, solutions, target audience (students), gallery, team, and contact. It emphasizes responsive design patterns and component-based architecture to showcase product features visually and accessibly.
+OptiCode is a single-page promotional website for the JOVI smartphone product. It showcases key features, explains who benefits most from the device, displays visual highlights, introduces the project team, and provides a contact form to reach the team. The site is built as a React application using Vite for fast development and Tailwind CSS for styling.
 
-For beginners, this project demonstrates how to structure a modern React app with reusable components and section-based layouts. For experienced developers, it provides a clean entry point into the codebase, showing how Vite plugins integrate with React and Tailwind, and how components compose the full page.
+Purpose:
+- Present the JOVI smartphone’s value proposition and capabilities.
+- Communicate the target audience (students).
+- Provide a clear path for users to contact the team.
+
+Target audience:
+- Students and academic users who rely on smartphones for study, content capture, and productivity.
+
+Contact functionality:
+- A dedicated section with contact details and a form to send messages.
+
+[No sources needed since this section summarizes without analyzing specific files]
 
 ## Project Structure
-The project follows a feature-oriented organization under src/components, where each major section of the landing page is implemented as a dedicated component. The root App component composes these sections into a single-page layout. Styling uses Tailwind CSS via the Vite plugin, and assets such as images and videos are referenced from public paths.
+The project follows a component-based architecture where each major page area is implemented as a reusable React component. The root App component composes these sections into a single-page layout.
+
+Key directories and files:
+- src/components: UI components for each section (Header, Hero, Solucao, PublicoAlvo, Galeria, Equipe, Contato, Footer).
+- public/imagens: Static images used by the gallery and team sections.
+- vite.config.js: Vite configuration enabling React and Tailwind plugins.
+- package.json: Dependencies including React, Vite, Tailwind CSS, and React Icons.
 
 ```mermaid
 graph TB
-A["index.html"] --> B["src/main.jsx"]
-B --> C["src/App.jsx"]
-C --> D["Header"]
-C --> E["Hero"]
-C --> F["Solução"]
-C --> G["Público-Alvo"]
-C --> H["Galeria"]
-C --> I["Equipe"]
-C --> J["Contato"]
-C --> K["Footer"]
+HTML["index.html"] --> MainJS["src/main.jsx"]
+MainJS --> AppJS["src/App.jsx"]
+AppJS --> Header["components/Header.jsx"]
+AppJS --> Hero["components/Hero.jsx"]
+AppJS --> Solucao["components/Solucao.jsx"]
+AppJS --> PublicoAlvo["components/PublicoAlvo.jsx"]
+AppJS --> Galeria["components/Galeria.jsx"]
+AppJS --> Equipe["components/Equipe.jsx"]
+AppJS --> Contato["components/Contato.jsx"]
+AppJS --> Footer["components/Footer.jsx"]
 ```
 
 **Diagram sources**
-- [index.html:1-200](file://index.html#L1-L200)
-- [src/main.jsx:1-11](file://src/main.jsx#L1-L11)
+- [index.html:1-20](file://index.html#L1-L20)
+- [src/main.jsx:1-20](file://src/main.jsx#L1-L20)
 - [src/App.jsx:1-26](file://src/App.jsx#L1-L26)
-
-Key files and responsibilities:
-- index.html: HTML shell that mounts the React app.
-- src/main.jsx: Entry point that renders the App component inside StrictMode.
-- src/App.jsx: Root component composing all sections.
-- vite.config.js: Configures Vite with React and Tailwind plugins.
-- package.json: Defines scripts and dependencies including React, ReactDOM, Vite, Tailwind, and react-icons.
 
 **Section sources**
-- [README.md:1-17](file://README.md#L1-L17)
-- [package.json:1-31](file://package.json#L1-L31)
-- [vite.config.js:1-10](file://vite.config.js#L1-L10)
-- [src/main.jsx:1-11](file://src/main.jsx#L1-L11)
 - [src/App.jsx:1-26](file://src/App.jsx#L1-L26)
+- [vite.config.js:1-10](file://vite.config.js#L1-L10)
+- [package.json:1-31](file://package.json#L1-L31)
 
 ## Core Components
-This section outlines the main components that build the landing page. Each component encapsulates a specific section or UI element, promoting reusability and maintainability.
+This section outlines the main sections that compose the website. Each component renders a semantic <section> with a unique id for navigation and accessibility.
 
-- Header: Navigation bar with links to sections and a mobile menu toggle.
-- Hero: Prominent hero area with video background, headline, call-to-action buttons, and benefit highlights.
-- Solução: Solutions grid showcasing camera, AI post-processing, reliability, shutter lag improvements, and focus performance.
-- Público-Alvo: Target audience section focused on students, highlighting study support, capture efficiency, and performance.
-- Galeria: Photo gallery demonstrating device details and usage scenarios.
-- Equipe: Team introduction cards with roles and descriptions.
-- Contato: Contact section with contact info and a form composed of reusable input fields.
-- Footer: Site footer with navigation columns, brand tagline, and contact details.
+- Header: Top navigation bar linking to sections.
+- Hero: Primary hero banner introducing the product.
+- Solucao: Highlights core solutions/features of the smartphone.
+- PublicoAlvo: Describes the target audience and use cases.
+- Galeria: Visual showcase of the smartphone and its features.
+- Equipe: Introduces the project team members.
+- Contato: Contact information and message form.
+- Footer: Site footer with links and additional info.
 
-These components work together to deliver a complete, responsive user experience across devices.
+Practical examples:
+- Solucao: Presents feature cards such as photography, post-processing, file reliability, shutter lag reduction, and quick focus.
+- PublicoAlvo: Explains how students benefit from improved study access, camera efficiency, and performance.
+- Galeria: Displays multiple images showcasing the device and usage scenarios.
+- Equipe: Shows team member cards with roles and descriptions.
+- Contato: Provides email, location, hours, and a form to send messages.
 
 **Section sources**
-- [src/components/Header.jsx:1-77](file://src/components/Header.jsx#L1-L77)
-- [src/components/Hero.jsx:1-67](file://src/components/Hero.jsx#L1-L67)
 - [src/components/Solucao.jsx:1-74](file://src/components/Solucao.jsx#L1-L74)
 - [src/components/PublicoAlvo.jsx:1-88](file://src/components/PublicoAlvo.jsx#L1-L88)
 - [src/components/Galeria.jsx:1-55](file://src/components/Galeria.jsx#L1-L55)
 - [src/components/Equipe.jsx:1-75](file://src/components/Equipe.jsx#L1-L75)
 - [src/components/Contato.jsx:1-112](file://src/components/Contato.jsx#L1-L112)
-- [src/components/Footer.jsx:1-127](file://src/components/Footer.jsx#L1-L127)
 
 ## Architecture Overview
-The application follows a standard React + Vite architecture:
-- Build tooling: Vite with @vitejs/plugin-react and @tailwindcss/vite.
-- Styling: Tailwind CSS utility classes applied throughout components.
-- Icons: react-icons used consistently across sections.
-- Routing: Single-page navigation using anchor links to section IDs.
+The application uses a simple, scalable component composition pattern:
+- Entry point: index.html loads the app via src/main.jsx.
+- Root component: src/App.jsx composes all top-level sections.
+- Section components: Each section is self-contained and styled with Tailwind utility classes.
+- Styling: Tailwind CSS v4 is enabled through @tailwindcss/vite plugin.
+- Build tooling: Vite provides dev server, HMR, and production builds.
 
 ```mermaid
 graph TB
-subgraph "Build & Runtime"
-V["Vite"] --> R["React"]
-V --> T["Tailwind CSS"]
+subgraph "Build & Config"
+ViteCfg["vite.config.js"]
+Pkg["package.json"]
 end
-subgraph "Application"
-M["main.jsx"] --> A["App.jsx"]
-A --> H["Header.jsx"]
-A --> HE["Hero.jsx"]
-A --> S["Solucao.jsx"]
-A --> P["PublicoAlvo.jsx"]
-A --> G["Galeria.jsx"]
-A --> E["Equipe.jsx"]
-A --> C["Contato.jsx"]
-A --> F["Footer.jsx"]
+subgraph "App Shell"
+IndexHTML["index.html"]
+MainJS["src/main.jsx"]
+AppJS["src/App.jsx"]
 end
-R --> M
-T --> A
+subgraph "Sections"
+Header["Header.jsx"]
+Hero["Hero.jsx"]
+Solucao["Solucao.jsx"]
+PublicoAlvo["PublicoAlvo.jsx"]
+Galeria["Galeria.jsx"]
+Equipe["Equipe.jsx"]
+Contato["Contato.jsx"]
+Footer["Footer.jsx"]
+end
+ViteCfg --> AppJS
+Pkg --> AppJS
+IndexHTML --> MainJS
+MainJS --> AppJS
+AppJS --> Header
+AppJS --> Hero
+AppJS --> Solucao
+AppJS --> PublicoAlvo
+AppJS --> Galeria
+AppJS --> Equipe
+AppJS --> Contato
+AppJS --> Footer
 ```
 
 **Diagram sources**
 - [vite.config.js:1-10](file://vite.config.js#L1-L10)
-- [src/main.jsx:1-11](file://src/main.jsx#L1-L11)
+- [package.json:1-31](file://package.json#L1-L31)
+- [index.html:1-20](file://index.html#L1-L20)
+- [src/main.jsx:1-20](file://src/main.jsx#L1-L20)
 - [src/App.jsx:1-26](file://src/App.jsx#L1-L26)
 
 ## Detailed Component Analysis
 
-### Header
-Purpose: Provides top-level navigation and brand identity. Uses HeaderLink components for consistent link styling and includes a mobile menu button.
+### Solucao (Solution)
+Purpose:
+- Showcases the smartphone’s core solutions and improvements.
 
-Responsibilities:
-- Render logo and brand name.
-- Provide anchor links to key sections.
-- Support accessibility attributes for menu toggling.
+Structure:
+- Section header with label and title.
+- Grid of solution cards, each with an icon, title, and description.
 
-```mermaid
-classDiagram
-class Header {
-+render()
-}
-class HeaderLink {
-+href
-+texto
-}
-Header --> HeaderLink : "renders multiple"
-```
-
-**Diagram sources**
-- [src/components/Header.jsx:1-77](file://src/components/Header.jsx#L1-L77)
-
-**Section sources**
-- [src/components/Header.jsx:1-77](file://src/components/Header.jsx#L1-L77)
-
-### Hero
-Purpose: Captures attention with a video background, headline, subtitle, CTAs, and benefit highlights.
-
-Responsibilities:
-- Display a looping, muted video banner.
-- Present primary messaging and calls to action.
-- Showcase benefits using icons and labels.
-
-```mermaid
-sequenceDiagram
-participant User as "User"
-participant Hero as "Hero.jsx"
-participant Video as "HTMLVideoElement"
-participant CTA as "Anchor Links"
-User->>Hero : View hero section
-Hero->>Video : autoPlay, muted, loop
-Hero->>CTA : Navigate to #solucao / #contato
-Note over Hero,CTA : Benefits displayed with icons
-```
-
-**Diagram sources**
-- [src/components/Hero.jsx:1-67](file://src/components/Hero.jsx#L1-L67)
-
-**Section sources**
-- [src/components/Hero.jsx:1-67](file://src/components/Hero.jsx#L1-L67)
-
-### Solução
-Purpose: Highlights core product solutions in a grid layout.
-
-Responsibilities:
-- Present solution cards with icons, titles, and descriptions.
-- Emphasize camera assistance, AI post-processing, reliability, shutter lag reduction, and focus speed.
+Implementation notes:
+- Uses react-icons for visual cues.
+- Renders multiple SolucaoCard instances with distinct icons and copy.
 
 ```mermaid
 flowchart TD
-Start(["Render Solução"]) --> Grid["Grid Layout"]
-Grid --> Card1["Camera Assistance"]
-Grid --> Card2["AI Post-Processing"]
-Grid --> Card3["Reliability"]
-Grid --> Card4["Shutter Lag Reduction"]
-Grid --> Card5["Focus Speed"]
-Card1 --> End(["Display Cards"])
-Card2 --> End
-Card3 --> End
-Card4 --> End
-Card5 --> End
+Start(["Render Solucao"]) --> Header["Render section header<br/>label + title"]
+Header --> Cards["Render grid of SolucaoCard items"]
+Cards --> End(["End"])
 ```
 
 **Diagram sources**
@@ -209,72 +181,75 @@ Card5 --> End
 **Section sources**
 - [src/components/Solucao.jsx:1-74](file://src/components/Solucao.jsx#L1-L74)
 
-### Público-Alvo
-Purpose: Communicates the student-focused value proposition and use cases.
+### PublicoAlvo (Target Audience)
+Purpose:
+- Defines the primary audience (students) and their use cases.
 
-Responsibilities:
-- Introduce the target audience and rationale.
-- Highlight study support, efficient capture, and performance.
+Structure:
+- Section header with label, title, and descriptive paragraph.
+- Large icon and text block emphasizing “ESTUDANTES”.
+- Grid of cards covering studies, records, and performance.
 
-```mermaid
-classDiagram
-class PublicoAlvo {
-+render()
-}
-class PublicoAlvoCard {
-+Icone
-+titulo
-+texto
-}
-PublicoAlvo --> PublicoAlvoCard : "renders multiple"
-```
-
-**Diagram sources**
-- [src/components/PublicoAlvo.jsx:1-88](file://src/components/PublicoAlvo.jsx#L1-L88)
-
-**Section sources**
-- [src/components/PublicoAlvo.jsx:1-88](file://src/components/PublicoAlvo.jsx#L1-L88)
-
-### Galeria
-Purpose: Showcases product visuals and usage scenarios.
-
-Responsibilities:
-- Display a prominent hero image and additional photos.
-- Use a reusable photo card component for consistency.
+Implementation notes:
+- Uses react-icons to illustrate key areas.
+- Emphasizes student-centric benefits.
 
 ```mermaid
 flowchart TD
-Start(["Render Galeria"]) --> MainImg["Main Image"]
-Start --> Photos["Photo Cards"]
-Photos --> End(["Gallery Grid"])
-MainImg --> End
+Start(["Render PublicoAlvo"]) --> Header["Render section header<br/>label + title + description"]
+Header --> Highlight["Highlight 'ESTUDANTES' with icon and text"]
+Highlight --> Cards["Render cards for Estudos, Registros, Desempenho"]
+Cards --> End(["End"])
 ```
 
 **Diagram sources**
-- [src/components/Galeria.jsx:1-55](file://src/components/Galeria.jsx#L1-L55)
+- [src/components/PublicoAlvo.jsx:1-88](file://src/components/PublicoAlvo.jsx#L1-L88)
 
 **Section sources**
-- [src/components/Galeria.jsx:1-55](file://src/components/Galeria.jsx#L1-L55)
+- [src/components/PublicoAlvo.jsx:1-88](file://src/components/PublicoAlvo.jsx#L1-L88)
 
-### Equipe
-Purpose: Introduces the team behind the project with role descriptions.
+### Galeria (Gallery)
+Purpose:
+- Visually presents the smartphone and related features.
 
-Responsibilities:
-- Render team member cards with images, names, roles, and descriptions.
+Structure:
+- Section header with label, title, and short description.
+- Image grid with one large image and several smaller ones.
+
+Implementation notes:
+- Uses static images under public/imagens.
+- Includes a helper component GaleriaFotos for repeated image blocks.
 
 ```mermaid
-classDiagram
-class Equipe {
-+render()
-}
-class EquipeCard {
-+src
-+alt
-+titulo
-+funcao
-+textoTime
-}
-Equipe --> EquipeCard : "renders multiple"
+flowchart TD
+Start(["Render Galeria"]) --> Header["Render section header<br/>label + title + description"]
+Header --> Grid["Render image grid<br/>large image + GaleriaFotos items"]
+Grid --> End(["End"])
+```
+
+**Diagram sources**
+- [src/components/Galeria.jsx:1-55](file://src/components/Galeria.jsx#L1-L55)
+
+**Section sources**
+- [src/components/Galeria.jsx:1-55](file://src/components/Galeria.jsx#L1-L55)
+
+### Equipe (Team)
+Purpose:
+- Introduces the team behind OptiCode.
+
+Structure:
+- Section header with label, title, and description.
+- Grid of team member cards with photo, name, role, and brief bio.
+
+Implementation notes:
+- Uses static images for avatars.
+- Each card conveys role and contribution.
+
+```mermaid
+flowchart TD
+Start(["Render Equipe"]) --> Header["Render section header<br/>label + title + description"]
+Header --> TeamGrid["Render grid of EquipeCard items"]
+TeamGrid --> End(["End"])
 ```
 
 **Diagram sources**
@@ -283,24 +258,30 @@ Equipe --> EquipeCard : "renders multiple"
 **Section sources**
 - [src/components/Equipe.jsx:1-75](file://src/components/Equipe.jsx#L1-L75)
 
-### Contato
-Purpose: Provides contact information and a message form.
+### Contato (Contact)
+Purpose:
+- Provides contact information and a form to send messages.
 
-Responsibilities:
-- Display email, location, and hours.
-- Compose form inputs using a reusable field component.
-- Include a submit button.
+Structure:
+- Section header with label, title, and description.
+- Left column with contact details (email, location, hours).
+- Right column with a form composed of ContatoForm fields and a submit button.
+
+Implementation notes:
+- Uses react-icons for contact metadata.
+- Form fields are rendered via a shared ContatoForm component.
 
 ```mermaid
 sequenceDiagram
 participant User as "User"
 participant Contato as "Contato.jsx"
-participant Form as "Form Fields"
+participant Form as "ContatoForm.jsx"
 participant Submit as "Submit Button"
 User->>Contato : Open contact section
-Contato->>Form : Render inputs (name, email, subject, message)
-User->>Submit : Click send
-Note over Contato,Submit : Contact info displayed alongside form
+Contato->>Form : Render input fields (name, email, subject, message)
+User->>Form : Fill out fields
+User->>Submit : Click "ENVIAR MENSAGEM"
+Submit-->>Contato : Trigger form submission
 ```
 
 **Diagram sources**
@@ -309,91 +290,64 @@ Note over Contato,Submit : Contact info displayed alongside form
 **Section sources**
 - [src/components/Contato.jsx:1-112](file://src/components/Contato.jsx#L1-L112)
 
-### Footer
-Purpose: Consolidates site navigation, branding, and contact details.
+### Conceptual Overview
+For beginners:
+- The website is a single page divided into sections that explain what the JOVI smartphone offers, who it’s for, how it looks, who made it, and how to get in touch.
+- Navigation typically scrolls between sections like Solucao, PublicoAlvo, Galeria, Equipe, and Contato.
 
-Responsibilities:
-- Render navigation columns and project links.
-- Display brand tagline and contact information.
-- Include copyright notice.
+For experienced developers:
+- The app follows a flat component tree rooted at App.jsx.
+- Sections are stateless presentational components focused on rendering structured content.
+- Styling is handled via Tailwind utility classes; no global CSS frameworks beyond Tailwind.
 
-```mermaid
-classDiagram
-class Footer {
-+render()
-}
-class FooterColuna {
-+titulo
-}
-class FooterLink {
-+href
-+texto
-}
-Footer --> FooterColuna : "renders multiple"
-FooterColuna --> FooterLink : "renders multiple"
-```
-
-**Diagram sources**
-- [src/components/Footer.jsx:1-127](file://src/components/Footer.jsx#L1-L127)
-
-**Section sources**
-- [src/components/Footer.jsx:1-127](file://src/components/Footer.jsx#L1-L127)
+[No sources needed since this section doesn't analyze specific files]
 
 ## Dependency Analysis
-High-level dependency relationships among components and external libraries:
+Technology stack:
+- React 19.2.8 and React DOM 19.2.8 for UI rendering.
+- Vite 8.3.0 as the build tool and dev server.
+- Tailwind CSS 4.3.3 with @tailwindcss/vite plugin for styling.
+- React Icons 5.7.0 for consistent iconography across sections.
 
 ```mermaid
 graph LR
-App["App.jsx"] --> Header["Header.jsx"]
-App --> Hero["Hero.jsx"]
-App --> Solucao["Solucao.jsx"]
-App --> PublicoAlvo["PublicoAlvo.jsx"]
-App --> Galeria["Galeria.jsx"]
-App --> Equipe["Equipe.jsx"]
-App --> Contato["Contato.jsx"]
-App --> Footer["Footer.jsx"]
-Hero --> Icons["react-icons"]
-Solucao --> Icons
-PublicoAlvo --> Icons
-Contato --> Icons
-Header --> Icons
-Vite["vite.config.js"] --> React["@vitejs/plugin-react"]
-Vite --> Tailwind["@tailwindcss/vite"]
+App["App.jsx"] --> React["react ^19.2.8"]
+App --> ReactDOM["react-dom ^19.2.8"]
+App --> Tailwind["@tailwindcss/vite ^4.3.3"]
+App --> TailwindCSS["tailwindcss ^4.3.3"]
+App --> ReactIcons["react-icons ^5.7.0"]
+Dev["Vite 8.3.0"] --> App
 ```
 
 **Diagram sources**
-- [src/App.jsx:1-26](file://src/App.jsx#L1-L26)
-- [vite.config.js:1-10](file://vite.config.js#L1-L10)
 - [package.json:12-18](file://package.json#L12-L18)
+- [package.json:19-29](file://package.json#L19-L29)
+- [vite.config.js:1-10](file://vite.config.js#L1-L10)
 
 **Section sources**
-- [src/App.jsx:1-26](file://src/App.jsx#L1-L26)
-- [package.json:12-18](file://package.json#L12-L18)
+- [package.json:1-31](file://package.json#L1-L31)
 - [vite.config.js:1-10](file://vite.config.js#L1-L10)
 
 ## Performance Considerations
-- Asset loading: Hero uses a looping video; ensure appropriate optimization and fallbacks for mobile networks.
-- Image assets: Gallery images should be optimized and lazy-loaded if expanded.
-- Icon library: react-icons is included; consider tree-shaking or selective imports to reduce bundle size.
-- Styling: Tailwind utilities are applied directly; keep class usage minimal and consistent to avoid style bloat.
-- Build configuration: Vite’s React and Tailwind plugins are configured; verify that unused styles are purged in production builds.
+- Use lazy loading for heavy assets (images) in Galeria to improve initial load time.
+- Keep component trees shallow; current structure is already lightweight and modular.
+- Prefer static imports for icons used across sections; avoid dynamic imports unless necessary.
+- Leverage Vite’s HMR during development for faster iteration.
 
 [No sources needed since this section provides general guidance]
 
 ## Troubleshooting Guide
 Common issues and resolutions:
-- Missing assets: Ensure images and videos referenced in components exist under public paths and are correctly linked.
-- Tailwind not applying: Confirm the Tailwind plugin is enabled in vite.config.js and that index.css imports Tailwind directives if required by your setup.
-- Icons not rendering: Verify react-icons is installed and imported correctly in components.
-- Navigation anchors: Section IDs must match anchor href values (e.g., #inicio, #solucao, #publico-alvo, #galerias, #equipe, #contato).
+- Images not loading: Ensure paths under public/imagens match the references in Galeria and Equipe. Verify that the public directory is correctly served by Vite.
+- Tailwind styles not applied: Confirm @tailwindcss/vite plugin is included in vite.config.js and that Tailwind directives are present in the CSS entry.
+- Icons missing: Verify react-icons is installed and imported correctly in components.
+- Build errors: Check ESLint rules and ensure dependencies versions align with package.json.
 
 **Section sources**
-- [src/components/Hero.jsx:10-17](file://src/components/Hero.jsx#L10-L17)
-- [src/components/Galeria.jsx:23-48](file://src/components/Galeria.jsx#L23-L48)
 - [vite.config.js:1-10](file://vite.config.js#L1-L10)
-- [package.json:12-18](file://package.json#L12-L18)
+- [package.json:1-31](file://package.json#L1-L31)
 
 ## Conclusion
-OptiCode delivers a polished, single-page marketing experience for the JOVI smartphone, organized around clear sections and reusable components. Built with React, Vite, and Tailwind CSS, it balances visual appeal with maintainable code structure. Beginners can learn how to compose a landing page from modular components, while experienced developers can leverage the straightforward architecture to extend features, refine styling, and optimize performance.
+OptiCode is a well-structured, component-driven promotional site for the JOVI smartphone. It clearly communicates the product’s value, targets students, visually showcases the device, introduces the team, and enables user contact. The tech stack (React, Vite, Tailwind CSS, React Icons) supports rapid development and clean, maintainable code.
 
 [No sources needed since this section summarizes without analyzing specific files]
