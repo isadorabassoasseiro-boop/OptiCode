@@ -1,0 +1,1 @@
+React-based single-page landing site for OptiCode, composed of section components (header, hero, solutions, audience, gallery, team, contact, footer) rendered into a Vite-hosted HTML shell.

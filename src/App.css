@@ -146,119 +146,174 @@ body {
 
 #inicio {
 
-    min-height: auto;
-    background-color: #020A1D;
+    position: relative;
 
-    padding-top: 90px;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 130px 24px 90px;
+
+    background-color: #000000;
+
+    overflow: hidden;
 }
 
 
-#inicio .container {
+.videoHero {
+
+    position: absolute;
+    inset: 0;
 
     width: 100%;
-    max-width: 1550px;
-    margin: 0 auto;
-    padding: 25px 50px 70px;
+    height: 100%;
 
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    align-items: start;
-    gap: 80px;
+    object-fit: cover;
+
+    opacity: 0.75;
 }
 
 
-.conteudo {
+.sombraHero {
 
-    padding-top: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
-.textoHero h1 {
-
-    margin: 0;
-    color: var(--light);
-    font-family: var(--text);
-    font-size: clamp(52px, 5vw, 78px);
-    font-weight: 800;
-    line-height: 0.98;
-    letter-spacing: -2px;
-}
-
-
-.textoHero h1 span {
+    position: absolute;
+    inset: 0;
 
     background: linear-gradient(
-        90deg,
-        #1683FF,
-        #00B7FF
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 30%,
+        rgba(0, 0, 0, 0.15) 55%,
+        rgba(2, 10, 29, 0.65) 85%,
+        #020A1D 100%
     );
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
 }
 
 
-.textoHero > p {
+.conteudoHero {
 
-    max-width: 500px;
-    margin-top: 35px;
-    margin-bottom: 0;
-    color: #F1FAEE;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-}
+    position: relative;
+    z-index: 1;
 
-.beneficios {
+    max-width: 900px;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 35px;
-    margin-top: 110px;
 
-    padding: 0;
-    list-style: none;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
 
-.caixaBeneficio {
-
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-
-.caixaBeneficio p {
+.tituloHero {
 
     margin: 0;
-    color: var(--light);
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.25;
+
+    color: #F5F5F7;
+
+    font-family: var(--text);
+    font-size: clamp(54px, 8vw, 104px);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
 }
 
 
-.imgHero {
+.subtituloHero {
+
+    margin: 20px 0 0;
+
+    color: #F5F5F7;
+
+    font-size: clamp(19px, 2.4vw, 28px);
+    font-weight: 500;
+}
+
+
+.acoesHero {
 
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    margin-top: 36px;
 }
 
 
-.imgHero img {
+.botaoPilha {
 
-    margin-top: -150px;
-    width: 100%;
-    max-width: 620px;
-    height: auto;
+    padding: 13px 28px;
+
+    border-radius: 980px;
+
+    background-color: #0071E3;
+
+    color: #FFFFFF;
+
+    font-family: var(--text);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.botaoPilha:hover {
+    background-color: #0077ED;
+}
+
+
+.botaoPilha.contorno {
+
+    background-color: transparent;
+    border: 1px solid #2997FF;
+
+    color: #2997FF;
+}
+
+
+.botaoPilha.contorno:hover {
+    background-color: rgba(41, 151, 255, 0.12);
+}
+
+
+.beneficiosHero {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    margin: 90px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.itemBeneficio {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #86868B;
+
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+
+.itemBeneficio svg {
+
+    color: #86868B;
+    font-size: 16px;
 }
 
 .botao {
@@ -1007,34 +1062,9 @@ body {
 
 @media (max-width: 1024px) {
 
-    #inicio .container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 25px 30px 60px;
-        text-align: center;
-    }
-
-    .conteudo {
-        align-items: center;
-    }
-
-    .textoHero > p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .imgHero {
-        order: -1;
-    }
-
-    .imgHero img {
-        margin-top: 0;
-        max-width: 420px;
-    }
-
-    .beneficios {
-        justify-content: center;
-        margin-top: 50px;
+    .beneficiosHero {
+        gap: 28px;
+        margin-top: 60px;
     }
 
     .grid {
@@ -1135,15 +1165,7 @@ body {
     }
 
     #inicio {
-        padding-top: 76px;
-    }
-
-    .textoHero h1 {
-        letter-spacing: -1px;
-    }
-
-    .beneficios {
-        gap: 24px;
+        padding: 110px 20px 70px;
     }
 
     .grid {
@@ -1207,16 +1229,14 @@ body {
         font-size: 20px;
     }
 
-    #inicio .container {
-        padding: 20px 20px 50px;
+    .acoesHero {
+        flex-direction: column;
+        width: 100%;
     }
 
-    .textoHero h1 {
-        font-size: 42px;
-    }
-
-    .textoHero > p {
-        font-size: 15px;
+    .botaoPilha {
+        width: 100%;
+        text-align: center;
     }
 
     .botao {
@@ -1224,10 +1244,11 @@ body {
         text-align: center;
     }
 
-    .beneficios {
+    .beneficiosHero {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
+        align-items: center;
+        gap: 16px;
+        margin-top: 50px;
     }
 
     .grid {

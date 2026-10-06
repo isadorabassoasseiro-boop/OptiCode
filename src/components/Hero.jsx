@@ -2,77 +2,64 @@ import HeroBeneficio from "./HeroBenefico"
 import { MdOutlineSecurity } from "react-icons/md";
 import { GiProcessor } from "react-icons/gi";
 import { FaHeadphones } from "react-icons/fa6";
-import { WiDirectionRight } from "react-icons/wi";
 
 const Hero = () => {
-    return(
-        <>
+    return (
+        <section id="inicio">
 
-    <section id="inicio">
+            <video
+                className="videoHero"
+                src="./imagens/video_banner.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+            />
 
-        <div className="container">
+            <div className="sombraHero" aria-hidden="true"></div>
 
-            <div className="conteudo">
+            <div className="conteudoHero">
 
-                <div className="textoHero">
+                <h1 className="tituloHero">
+                    Smartphone JOVI
+                </h1>
 
-                    <h1>
-                        TECNOLOGIA<br/>
-                        QUE<br/>
-                        <span>CONECTA</span>
-                    </h1>
+                <p className="subtituloHero">
+                    Tecnologia que conecta.
+                </p>
 
-                    <p>
-                        Smartphone JOVI com um toque de OPTICODE,
-                        desempenho excepcional e recursos que
-                        facilitam o seu dia a dia.
-                    </p>
+                <div className="acoesHero">
+                    <a href="#solucao" className="botaoPilha">
+                        Saiba mais
+                    </a>
 
+                    <a href="#contato" className="botaoPilha contorno">
+                        Comprar
+                    </a>
                 </div>
 
-                <a href="#galerias" className="botao botaoHero">
-                    CONHEÇA NOSSOS SMARTPHONES
-                    <WiDirectionRight className="text-[#ffff] text-[25px]"/>
-                </a>
-
-                <ul className="beneficios">
+                <ul className="beneficiosHero">
 
                     <HeroBeneficio
                         Icone={MdOutlineSecurity}
-                        linha1="QUALIDADE"
-                        linha2="GARANTIDA"
+                        texto="Qualidade garantida"
                     />
 
                     <HeroBeneficio
                         Icone={GiProcessor}
-                        linha1="TECNOLOGIA"
-                        linha2="AVANÇADA"
+                        texto="Tecnologia avançada"
                     />
 
                     <HeroBeneficio
                         Icone={FaHeadphones}
-                        linha1="SUPORTE"
-                        linha2="ESPECIALIZADO"
+                        texto="Suporte especializado"
                     />
 
                 </ul>
 
             </div>
 
-            <div className="imgHero">
-
-                <img src="./imagens/ChatGPT Image Aug 27, 2026, 04_31_27 PM.png" alt="Smartphones JOVI"
-                />
-
-            </div>
-
-        </div>
-
-    </section>
-
-   
-        
-        </>
+        </section>
     )
 }
 
