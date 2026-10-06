@@ -1,1 +1,0 @@
-Vite 8 as the dev server and bundler, React 19 with ReactDOM, Tailwind CSS v4 via `@tailwindcss/vite`, and ESLint 10 for linting.

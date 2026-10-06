@@ -1,2 +1,0 @@
-- ESLint rules are centralized in the root `eslint.config.js` rather than per-package configs.
-- Build and preview tooling is configured exclusively through `vite.config.js` at the project root.

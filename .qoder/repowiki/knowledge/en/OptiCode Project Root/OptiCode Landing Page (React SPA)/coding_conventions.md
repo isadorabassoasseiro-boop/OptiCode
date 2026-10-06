@@ -1,4 +1,0 @@
-- Each page section is implemented as a default-exported function component in its own file under `src/components/`, named after the Portuguese section label (e.g. `Solucao.jsx`, `PublicoAlvo.jsx`, `Contato.jsx`).
-- Section components are composed directly in `App.jsx` without props drilling or context — the app is a flat composition of sibling sections.
-- Styling is colocated: every component imports a sibling `.css` file (e.g. `import './App.css'`, `import './index.css'`) rather than using CSS-in-JS or a global stylesheet.
-- Reusable sub-parts of a section (cards, columns, links, form fields) are extracted into dedicated sibling components under the same `components/` directory instead of being inlined.
