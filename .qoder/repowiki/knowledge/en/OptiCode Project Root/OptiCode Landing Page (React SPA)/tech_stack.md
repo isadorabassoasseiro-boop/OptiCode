@@ -1,0 +1,1 @@
+React 18+ with `react-dom/client` `createRoot` API; Vite-style ESM entry (`<script type="module" src="/src/main.jsx">`); CSS Modules not used — plain CSS files co-located with components.
