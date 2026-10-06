@@ -1,1 +1,0 @@
-Vite + React project root that bootstraps the OptiCode landing page SPA, wiring Vite plugins, ESLint, and Tailwind into a single build pipeline.
