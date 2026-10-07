@@ -51,7 +51,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding: 128px 24px 90px;
+    padding: 112px 24px 90px;
 
     background-color: #000000;
 
@@ -1019,7 +1019,7 @@ body {
 @media (max-width: 768px) {
 
     #inicio {
-        padding: 104px 20px 70px;
+        padding: 96px 20px 70px;
     }
 
     .grid {

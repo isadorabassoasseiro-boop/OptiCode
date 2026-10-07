@@ -3,11 +3,11 @@ schema_version: 1
 locale: en-US
 branch: feature/inicio
 nodes_managed: true
-exported_at: "2026-10-07T18:05:14Z"
+exported_at: "2026-10-07T20:05:29Z"
 modules:
     "":
-        dir_name: OptiCode Landing Page (React + Vite)
-        title: OptiCode Landing Page (React + Vite)
+        dir_name: OptiCode JOVI Landing Page (React + Vite SPA)
+        title: OptiCode JOVI Landing Page (React + Vite SPA)
         scope:
             - .gitignore
             - README.md
