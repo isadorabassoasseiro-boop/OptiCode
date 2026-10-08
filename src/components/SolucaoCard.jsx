@@ -1,7 +1,7 @@
 function SolucaoCard({ titulo, texto, imagem, className = "" }) {
     return (
         <article
-            className={`group relative overflow-hidden rounded-2xl border border-navy/40 bg-deep transition-colors duration-500 hover:border-azure/60 ${className}`}
+            className={`group relative isolate overflow-hidden rounded-2xl border border-navy/40 bg-deep transition-colors duration-500 hover:border-azure/60 ${className}`}
         >
             {/* Camada de mídia — escala suave no hover (efeito de seleção) */}
             <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.06]">
@@ -28,11 +28,11 @@ function SolucaoCard({ titulo, texto, imagem, className = "" }) {
             </div>
 
             {/* Card de informações — sobe de baixo no hover cobrindo a imagem */}
-            <div className="absolute inset-0 z-20 flex translate-y-full flex-col justify-end gap-2 bg-neutral-200/80 p-5 backdrop-blur-md transition-transform duration-500 ease-out group-hover:translate-y-0">
-                <h3 className="font-brand text-base font-semibold uppercase tracking-[0.12em] text-night">
+            <div className="absolute inset-0 z-20 flex translate-y-full flex-col justify-end gap-2 bg-neutral-900/70 p-5 backdrop-blur-lg transition-transform duration-500 ease-out group-hover:translate-y-0">
+                <h3 className="font-brand text-base font-semibold uppercase tracking-[0.12em] text-ice">
                     {titulo}
                 </h3>
-                <p className="text-sm leading-relaxed text-night/70">
+                <p className="text-sm leading-relaxed text-ice/70">
                     {texto}
                 </p>
             </div>

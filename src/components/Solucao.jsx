@@ -23,6 +23,7 @@ const Solucao = () => {
 
                 <SolucaoCard
                     className="min-h-[260px]"
+                    imagem="./imagens/pos_processamento.jpg"
                     titulo="Pós-processamento"
                     texto="Pós-processamento com IA, oferecendo maior controle
                         e reduzindo distorções indesejadas."
@@ -30,6 +31,7 @@ const Solucao = () => {
 
                 <SolucaoCard
                     className="min-h-[380px] md:row-span-2"
+                    imagem="./imagens/camera.jpg"
                     titulo="Fotografia"
                     texto="Assistência fotográfica integrada que estabiliza o software,
                         corrige granulação e melhora a imagem em tempo real."
@@ -44,6 +46,7 @@ const Solucao = () => {
 
                 <SolucaoCard
                     className="min-h-[260px]"
+                    imagem="./imagens/bugs.jpg"
                     titulo="Arquivos e bugs"
                     texto="Sistema de salvamento mais robusto e confiável,
                         reduzindo falhas e perda de arquivos."
