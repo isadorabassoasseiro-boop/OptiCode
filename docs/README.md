@@ -18,6 +18,13 @@ modificado, por quê e quais decisões visuais foram tomadas.
 | # | Arquivo | Escopo | Status |
 |---|---------|--------|--------|
 | 01 | [01-redesign-hero.md](./01-redesign-hero.md) | Seção central (Hero `#inicio`) + vídeo de fundo | Concluído |
+| 02 | [02-redesign-header.md](./02-redesign-header.md) | Header minimalista (48px, translúcido, ícone oficial, 3 links) | Concluído |
+
+## Referência transversal
+
+- [paleta-de-cores.md](./paleta-de-cores.md) — tokens oficiais Tailwind
+  (`night`, `deep`, `navy`, `azure`, `ice`) e regras de uso para **todas** as
+  partes do redesign.
 
 ## Como usar esta pasta
 

@@ -1,77 +1,88 @@
+import { useState, useRef, useEffect } from "react"
+import { FaBars, FaXmark, FaMagnifyingGlass } from "react-icons/fa6"
 import HeaderLink from "./HeaderLink"
 
 const Header = () => {
-  return (
+    const [menuAberto, setMenuAberto] = useState(false)
+    const [buscaAberta, setBuscaAberta] = useState(false)
+    const campoBusca = useRef(null)
 
-    <>
+    const fecharMenu = () => setMenuAberto(false)
 
-    <header>
+    const alternarBusca = () => {
+        setBuscaAberta((aberta) => !aberta)
+    }
 
-    <nav className="navbar">
+    useEffect(() => {
+        if (buscaAberta && campoBusca.current) {
+            campoBusca.current.focus()
+        }
+    }, [buscaAberta])
 
-        <div className="logo">
-            <i className="bx bxs-bolt icone" aria-hidden="true"></i>
+    return (
+        <header className="fixed inset-x-0 top-0 z-10 bg-white shadow-sm">
+            <nav className="relative mx-auto flex h-16 w-full items-center px-4 sm:px-6 md:px-10">
 
-            <a href="#inicio" className="nomeLogo">
-                OPTI<span>CODE</span>
-            </a>
-        </div>
+                {/* Logo — canto esquerdo */}
+                <div className="flex flex-1 items-center">
+                    <a
+                        href="#inicio"
+                        onClick={fecharMenu}
+                        aria-label="OptiCode — Home"
+                        className="flex items-center"
+                    >
+                        <img
+                            src="./imagens/Logotipo%20OPTICODE%20em%20Branco.png"
+                            alt="OptiCode"
+                            className="h-8 w-auto brightness-0 md:h-9"
+                        />
+                    </a>
+                </div>
 
-        <button className="btnMenu" id="btnMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="linksMenu">
-            <i className="bx bx-menu" aria-hidden="true"></i>
-        </button>
+                {/* Navegação — centro */}
+                <ul
+                    id="linksMenu"
+                    className={`${menuAberto ? "flex" : "hidden"} absolute inset-x-0 top-16 flex-col items-center gap-1 border-t border-neutral-200 bg-white px-6 py-5 shadow-md md:static md:flex md:flex-row md:items-center md:gap-10 md:border-0 md:bg-transparent md:p-0 md:shadow-none`}
+                >
+                    <HeaderLink href="#inicio" texto="Home" onClick={fecharMenu} />
+                    <HeaderLink href="#contato" texto="Suporte" onClick={fecharMenu} />
+                    <HeaderLink href="#equipe" texto="Sobre" onClick={fecharMenu} />
+                </ul>
 
-        <ul className="linksMenu" id="linksMenu">
+                {/* Pesquisa expansível + menu mobile — canto direito */}
+                <div className="flex flex-1 items-center justify-end gap-2 md:gap-3">
+                    <input
+                        ref={campoBusca}
+                        type="text"
+                        placeholder="Buscar"
+                        aria-label="Campo de pesquisa"
+                        className={`${buscaAberta ? "w-36 border border-neutral-300 px-3 opacity-100 md:w-56" : "w-0 border-0 px-0 opacity-0"} min-w-0 rounded-full bg-neutral-50 py-1.5 text-sm text-neutral-800 placeholder-neutral-400 transition-all duration-300 focus:border-neutral-400 focus:outline-none`}
+                    />
+                    <button
+                        type="button"
+                        aria-label={buscaAberta ? "Fechar pesquisa" : "Abrir pesquisa"}
+                        aria-expanded={buscaAberta}
+                        onClick={alternarBusca}
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-neutral-700 transition-colors duration-300 hover:bg-neutral-100 hover:text-black"
+                    >
+                        <FaMagnifyingGlass className="text-sm" />
+                    </button>
+                    <button
+                        type="button"
+                        id="btnMenu"
+                        aria-label={menuAberto ? "Fechar menu" : "Abrir menu"}
+                        aria-expanded={menuAberto}
+                        aria-controls="linksMenu"
+                        onClick={() => setMenuAberto(!menuAberto)}
+                        className={`${buscaAberta ? "hidden" : "flex"} h-8 w-8 shrink-0 items-center justify-center rounded-full text-neutral-800 transition-colors duration-300 hover:bg-neutral-100 md:hidden`}
+                    >
+                        {menuAberto ? <FaXmark className="text-base" /> : <FaBars className="text-base" />}
+                    </button>
+                </div>
 
-            <HeaderLink
-                href="#inicio"
-                texto="inicio"
-            
-            />
-
-            <HeaderLink
-                href="#solucao"
-                texto="Solução"
-            
-            />
-
-            <HeaderLink
-                href="#inicio"
-                texto="inicio"
-            
-            />
-
-            <HeaderLink
-                href="#publico-alvo"
-                texto="Público-Alvo"
-            
-            />
-
-            <HeaderLink
-                href="#galerias"
-                texto="Galeria"
-            
-            />
-
-            <HeaderLink
-                href="equipe"
-                texto="Nossa Equipe"
-            
-            />
-
-            <HeaderLink
-                href="#contato"
-                texto="Contato"
-            
-            />
-        </ul>
-
-    </nav>
-
-</header>
-    
-    </>
-  )
+            </nav>
+        </header>
+    )
 }
 
 export default Header
