@@ -19,8 +19,9 @@ const Header = () => {
         }
     }, [buscaAberta])
 
+    
     return (
-        <header className="fixed inset-x-0 top-0 z-10 bg-white shadow-sm">
+        <header className="fixed inset-x-0 top-0 z-10 bg-neutral-900/70 backdrop-blur-lg">
             <nav className="relative mx-auto flex h-16 w-full items-center px-4 sm:px-6 md:px-10">
 
                 {/* Logo — canto esquerdo */}
@@ -34,7 +35,7 @@ const Header = () => {
                         <img
                             src="./imagens/Logotipo%20OPTICODE%20em%20Branco.png"
                             alt="OptiCode"
-                            className="h-8 w-auto brightness-0 md:h-9"
+                            className="h-8 w-auto md:h-9"
                         />
                     </a>
                 </div>
@@ -42,7 +43,7 @@ const Header = () => {
                 {/* Navegação — centro */}
                 <ul
                     id="linksMenu"
-                    className={`${menuAberto ? "flex" : "hidden"} absolute inset-x-0 top-16 flex-col items-center gap-1 border-t border-neutral-200 bg-white px-6 py-5 shadow-md md:static md:flex md:flex-row md:items-center md:gap-10 md:border-0 md:bg-transparent md:p-0 md:shadow-none`}
+                    className={`${menuAberto ? "flex" : "hidden"} absolute inset-x-0 top-16 flex-col items-center gap-1 border-t border-white/10 bg-neutral-900/90 px-6 py-5 shadow-md backdrop-blur-lg md:static md:flex md:flex-row md:items-center md:gap-10 md:border-0 md:bg-transparent md:p-0 md:shadow-none md:backdrop-blur-none`}
                 >
                     <HeaderLink href="#inicio" texto="Home" onClick={fecharMenu} />
                     <HeaderLink href="#contato" texto="Suporte" onClick={fecharMenu} />
@@ -56,14 +57,14 @@ const Header = () => {
                         type="text"
                         placeholder="Buscar"
                         aria-label="Campo de pesquisa"
-                        className={`${buscaAberta ? "w-36 border border-neutral-300 px-3 opacity-100 md:w-56" : "w-0 border-0 px-0 opacity-0"} min-w-0 rounded-full bg-neutral-50 py-1.5 text-sm text-neutral-800 placeholder-neutral-400 transition-all duration-300 focus:border-neutral-400 focus:outline-none`}
+                        className={`${buscaAberta ? "w-28 border border-white/20 px-3 opacity-100 sm:w-40 md:w-56" : "w-0 border-0 px-0 opacity-0"} min-w-0 rounded-full bg-white/10 py-1.5 text-sm text-white placeholder-white/40 transition-all duration-300 focus:border-white/40 focus:outline-none`}
                     />
                     <button
                         type="button"
                         aria-label={buscaAberta ? "Fechar pesquisa" : "Abrir pesquisa"}
                         aria-expanded={buscaAberta}
                         onClick={alternarBusca}
-                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-neutral-700 transition-colors duration-300 hover:bg-neutral-100 hover:text-black"
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white/80 transition-colors duration-300 hover:bg-white/10 hover:text-white"
                     >
                         <FaMagnifyingGlass className="text-sm" />
                     </button>
@@ -74,7 +75,7 @@ const Header = () => {
                         aria-expanded={menuAberto}
                         aria-controls="linksMenu"
                         onClick={() => setMenuAberto(!menuAberto)}
-                        className={`${buscaAberta ? "hidden" : "flex"} h-8 w-8 shrink-0 items-center justify-center rounded-full text-neutral-800 transition-colors duration-300 hover:bg-neutral-100 md:hidden`}
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white/90 transition-colors duration-300 hover:bg-white/10 md:hidden"
                     >
                         {menuAberto ? <FaXmark className="text-base" /> : <FaBars className="text-base" />}
                     </button>
