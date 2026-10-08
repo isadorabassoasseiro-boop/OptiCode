@@ -19,6 +19,7 @@ const Header = () => {
         }
     }, [buscaAberta])
 
+    
     return (
         <header className="fixed inset-x-0 top-0 z-10 bg-neutral-900/70 backdrop-blur-lg">
             <nav className="relative mx-auto flex h-16 w-full items-center px-4 sm:px-6 md:px-10">
