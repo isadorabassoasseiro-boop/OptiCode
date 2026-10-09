@@ -1,7 +1,7 @@
 function SolucaoCard({ titulo, texto, imagem, className = "" }) {
     return (
         <article
-            className={`group relative isolate overflow-hidden rounded-2xl border border-navy/40 bg-deep transition-colors duration-500 hover:border-azure/60 ${className}`}
+            className={`group relative isolate overflow-hidden rounded-2xl bg-deep ${className}`}
         >
             {/* Camada de mídia — escala suave no hover (efeito de seleção) */}
             <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.06]">

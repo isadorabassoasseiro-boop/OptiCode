@@ -7,10 +7,6 @@ const Solucao = () => {
 
             <div className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
 
-                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-azure">
-                    A SOLUÇÃO
-                </p>
-
                 <h2 className="font-brand text-3xl font-bold uppercase text-ice md:text-4xl">
                     Smartphone feito para você
                 </h2>
@@ -39,6 +35,7 @@ const Solucao = () => {
 
                 <SolucaoCard
                     className="min-h-[260px]"
+                    imagem="./imagens/Jovi%20V70%20sob%20o%20c%C3%A9u%20estrelado.png"
                     titulo="Shutter lag"
                     texto="Captura mais rápida e instantânea,
                         evitando a perda de momentos importantes."
@@ -54,6 +51,7 @@ const Solucao = () => {
 
                 <SolucaoCard
                     className="min-h-[260px]"
+                    imagem="./imagens/foco%20da%20camera.jpg"
                     titulo="Foco rápido"
                     texto="Foco rápido e preciso mesmo em diferentes
                         condições de iluminação."
