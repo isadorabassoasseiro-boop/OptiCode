@@ -244,14 +244,6 @@ body {
 }
 
 
-#solucao {
-    background-color: #020A1D;
-    padding: 80px 40px 100px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-
-.topoSecao1,
 .topoSecao2,
 .topoSecao3,
 .topoSecao4,
@@ -262,7 +254,6 @@ body {
 }
 
 
-.label,
 .label2,
 .label3,
 .label4,
@@ -276,7 +267,6 @@ body {
 }
 
 
-.topoSecao1 h2,
 .topoSecao3 h2,
 .topoSecao4 h2,
 .topoSecao5 h2 {
@@ -286,59 +276,6 @@ body {
     font-weight: 800;
 
     margin: 0;
-}
-
-
-.grid {
-    max-width: 1300px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 14px;
-}
-
-.card {
-    min-height: 250px;
-    padding: 24px;
-
-    background-color: #03102A;
-    border: 1px solid #1760B8;
-    border-radius: 14px;
-    box-sizing: border-box;
-
-    transition: 0.3s ease;
-}
-
-.card h3 {
-    color: #F1FAEE;
-
-    font-size: 15px;
-    font-weight: 800;
-
-    margin: 0 0 14px;
-}
-
-.card p {
-    color: #C4CCE0;
-
-    font-size: 14px;
-    line-height: 1.55;
-
-    margin: 0;
-}
-
-
-.card:hover {
-    background-color: #061A3A;
-    border-color: #1683FF;
-    transform: translateY(-5px);
-}
-
-
-.card:hover i {
-    color: #00B7FF;
-    transform: translateY(-3px);
 }
 
 
@@ -1101,11 +1038,6 @@ body {
         margin-top: 50px;
     }
 
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .topoSecao1 h2,
     .topoSecao3 h2,
     .topoSecao4 h2,
     .topoSecao5 h2 {
@@ -1135,7 +1067,6 @@ body {
         padding: 24px;
     }
 
-    #solucao,
     #publico-alvo,
     .galeria,
     #equipe,
