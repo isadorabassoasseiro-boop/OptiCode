@@ -1,24 +1,55 @@
+import { useState } from "react";
+import { FaPlus } from "react-icons/fa";
+
 function PublicoAlvoCard ({Icone, titulo, texto, cor}) {
 
-    return(
-        <article className="group flex flex-col items-center gap-4 px-8 py-12 text-center transition-colors duration-300 ease-in-out hover:bg-navy/25">
+    const [ativo, setAtivo] = useState(false);
 
-            <Icone className={`${cor}
+    return(
+        <article className={`group relative h-64 overflow-hidden text-center transition-colors duration-300 ease-in-out md:h-72 ${ativo ? "bg-navy/25" : "hover:bg-navy/25"}`}>
+
+            {/* Clique reservado para o mobile (hover assume no desktop) */}
+            <button
+                type="button"
+                onClick={() => setAtivo(!ativo)}
+                aria-expanded={ativo}
+                aria-label={`${titulo} — ${ativo ? "recolher" : "mostrar"} informações`}
+                className="absolute inset-0 z-10 h-full w-full cursor-pointer outline-none md:cursor-default"
+            />
+
+            {/* "Roleta": ícone na parada 1, informações na parada 2 */}
+            <div className={`absolute inset-x-0 top-0 flex h-[200%] flex-col transition-transform duration-700 ease-in-out ${ativo ? "-translate-y-1/2" : "group-hover:-translate-y-1/2"}`}>
+
+                {/* Parada 1 — ícone */}
+                <div className="flex h-1/2 flex-col items-center justify-center gap-3">
+
+                    <Icone className={`${cor}
   text-5xl
   [text-shadow:0_0_16px_currentColor]
-  transition-transform
-  duration-300
+  transition-all
+  duration-500
   ease-in-out
-  group-hover:-translate-y-1
+  ${ativo ? "opacity-0 scale-90" : "group-hover:opacity-0 group-hover:scale-90"}
 `} />
 
-            <h3 className="text-xl font-bold text-[#F1FAEE]">
-                {titulo}
-            </h3>
+                    <FaPlus className={`text-sm text-[#697994] transition-opacity duration-500 ease-in-out md:hidden ${ativo ? "opacity-0" : "group-hover:opacity-0"}`} />
 
-            <p className="text-sm leading-relaxed text-[#C4CCE0]">
-                {texto}
-            </p>
+                </div>
+
+                {/* Parada 2 — informações */}
+                <div className="flex h-1/2 flex-col items-center justify-center px-2">
+
+                    <h3 className="text-xl font-bold text-[#F1FAEE]">
+                        {titulo}
+                    </h3>
+
+                    <p className="mt-2 text-sm leading-relaxed text-[#C4CCE0]">
+                        {texto}
+                    </p>
+
+                </div>
+
+            </div>
 
         </article>
     )

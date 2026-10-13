@@ -11,9 +11,9 @@ const PublicoAlvo = () => {
 
         <BannerEstudantes />
 
-        <div className="relative z-10 mx-auto -mt-28 w-full max-w-5xl px-6 pb-24 md:-mt-36">
+        <div className="relative isolate mx-auto -mt-28 w-full max-w-5xl px-6 pb-24 md:-mt-36">
 
-            <div className="grid grid-cols-1 divide-y divide-[#1760B8] overflow-hidden rounded-2xl border border-[#1760B8] bg-deep/90 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-md md:grid-cols-3 md:divide-x md:divide-y-0">
+            <div className="grid grid-cols-1 divide-y divide-[#334155] overflow-hidden rounded-2xl border border-[#334155] bg-deep/90 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-md md:grid-cols-3 md:divide-x md:divide-y-0">
 
                 <PublicoAlvoCard
                     Icone={FaBook}
