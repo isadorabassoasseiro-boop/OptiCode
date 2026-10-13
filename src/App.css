@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @import "tailwindcss";
 
@@ -9,7 +9,7 @@
     --color-azure: #2A7FFF;
     --color-ice: #A6F0FF;
 
-    --font-brand: "Lexend", sans-serif;
+    --font-brand: "Merriweather Sans", sans-serif;
 }
 
 
@@ -21,8 +21,8 @@
     --light: #F1FAEE;
     --gray: #B5C1D8;
 
-    --text: 'Lexend', sans-serif;
-    --logo: 'Lexend', sans-serif;
+    --text: 'Merriweather Sans', sans-serif;
+    --logo: 'Merriweather Sans', sans-serif;
 }
 
 
@@ -47,7 +47,7 @@ label,
 button,
 input,
 textarea {
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 
@@ -247,7 +247,7 @@ body {
 
     color: #FFFFFF;
 
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
     font-size: 13px;
     font-weight: 700;
     text-decoration: none;
@@ -301,7 +301,7 @@ body {
 #publico-alvo {
     background-color: #020A1D;
     padding: 80px 40px 100px;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 
@@ -458,7 +458,7 @@ body {
 .galeria {
     background-color: #020A1D;
     padding: 80px 40px 100px;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 
@@ -523,7 +523,7 @@ body {
 #equipe {
     background-color: #020A1D;
     padding: 80px 40px 100px;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 
@@ -615,7 +615,7 @@ body {
 #contato {
     background-color: #020A1D;
     padding: 80px 40px 100px;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 .topoSecao5 {
@@ -721,7 +721,7 @@ body {
     outline: none;
 
     color: #F1FAEE;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
     font-size: 14px;
 
     transition: 0.3s ease;
@@ -758,7 +758,7 @@ body {
 #footer {
     background-color: #010817;
     border-top: 1px solid #1760B8;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 
