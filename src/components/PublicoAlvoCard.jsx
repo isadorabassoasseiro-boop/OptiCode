@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 
-function PublicoAlvoCard ({Icone, titulo, texto, cor}) {
+function PublicoAlvoCard ({Icone, titulo, texto}) {
 
     const [ativo, setAtivo] = useState(false);
 
     return(
-        <article className={`group relative h-64 overflow-hidden text-center transition-colors duration-300 ease-in-out md:h-72 ${ativo ? "bg-navy/25" : "hover:bg-navy/25"}`}>
+        <article className={`group relative h-40 overflow-hidden text-center transition-colors duration-300 ease-in-out md:h-44 ${ativo ? "bg-navy/25" : "hover:bg-navy/25"}`}>
 
             {/* Clique reservado para o mobile (hover assume no desktop) */}
             <button
@@ -23,9 +23,8 @@ function PublicoAlvoCard ({Icone, titulo, texto, cor}) {
                 {/* Parada 1 — ícone */}
                 <div className="flex h-1/2 flex-col items-center justify-center gap-3">
 
-                    <Icone className={`${cor}
-  text-5xl
-  [text-shadow:0_0_16px_currentColor]
+                    <Icone className={`text-5xl
+  text-white/80
   transition-all
   duration-500
   ease-in-out

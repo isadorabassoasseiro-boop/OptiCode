@@ -32,13 +32,6 @@ const BannerEstudantes = () => {
                     Pensado em estudantes
                 </h2>
 
-                <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-[#C4CCE0] md:text-lg">
-                    A solução é voltada para estudantes que utilizam o
-                    smartphone como ferramenta de apoio na rotina acadêmica,
-                    seja para estudar, registrar conteúdos, realizar
-                    trabalhos ou se organizar.
-                </p>
-
             </div>
 
         </div>
