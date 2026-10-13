@@ -60,177 +60,7 @@ body {
     font-family: var(--text);
 }
 
-#inicio {
 
-    position: relative;
-
-    min-height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 112px 24px 90px;
-
-    background-color: #000000;
-
-    overflow: hidden;
-}
-
-
-.videoHero {
-
-    position: absolute;
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    opacity: 0.75;
-}
-
-
-.sombraHero {
-
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-        180deg,
-        #000000 0%,
-        rgba(0, 0, 0, 0.55) 30%,
-        rgba(0, 0, 0, 0.15) 55%,
-        rgba(2, 10, 29, 0.65) 85%,
-        #020A1D 100%
-    );
-}
-
-
-.conteudoHero {
-
-    position: relative;
-    z-index: 1;
-
-    max-width: 900px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-}
-
-
-.tituloHero {
-
-    margin: 0;
-
-    color: #F5F5F7;
-
-    font-family: var(--text);
-    font-size: clamp(54px, 8vw, 104px);
-    font-weight: 700;
-    line-height: 1.02;
-    letter-spacing: -0.03em;
-}
-
-
-.subtituloHero {
-
-    margin: 20px 0 0;
-
-    color: #F5F5F7;
-
-    font-size: clamp(19px, 2.4vw, 28px);
-    font-weight: 500;
-}
-
-
-.acoesHero {
-
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 18px;
-
-    margin-top: 36px;
-}
-
-
-.botaoPilha {
-
-    padding: 13px 28px;
-
-    border-radius: 980px;
-
-    background-color: #0071E3;
-
-    color: #FFFFFF;
-
-    font-family: var(--text);
-    font-size: 15px;
-    font-weight: 500;
-    text-decoration: none;
-
-    transition: 0.3s ease;
-}
-
-
-.botaoPilha:hover {
-    background-color: #0077ED;
-}
-
-
-.botaoPilha.contorno {
-
-    background-color: transparent;
-    border: 1px solid #2997FF;
-
-    color: #2997FF;
-}
-
-
-.botaoPilha.contorno:hover {
-    background-color: rgba(41, 151, 255, 0.12);
-}
-
-
-.beneficiosHero {
-
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-
-    margin: 90px 0 0;
-    padding: 0;
-
-    list-style: none;
-}
-
-
-.itemBeneficio {
-
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    color: #86868B;
-
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-}
-
-
-.itemBeneficio svg {
-
-    color: #86868B;
-    font-size: 16px;
-}
 
 .botao {
     width: fit-content;
@@ -777,11 +607,6 @@ body {
 
 @media (max-width: 1024px) {
 
-    .beneficiosHero {
-        gap: 28px;
-        margin-top: 60px;
-    }
-
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -813,10 +638,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
-    #inicio {
-        padding: 96px 20px 70px;
-    }
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
@@ -862,26 +683,9 @@ body {
 
 @media (max-width: 480px) {
 
-    .acoesHero {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .botaoPilha {
-        width: 100%;
-        text-align: center;
-    }
-
     .botao {
         width: 100%;
         text-align: center;
-    }
-
-    .beneficiosHero {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        margin-top: 50px;
     }
 
     .topoSecao3 h2,
