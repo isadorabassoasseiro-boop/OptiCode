@@ -1,68 +1,32 @@
-import { PiStudentBold } from "react-icons/pi";
 import { FaBook } from "react-icons/fa";
 import { FaCamera } from "react-icons/fa";
 import { AiFillThunderbolt } from "react-icons/ai";
 import PublicoAlvoCard from "./PublicoAlvoCard";
+import BannerEstudantes from "./BannerEstudantes";
 
 const PublicoAlvo = () => {
     return(
         
     <section id="publico-alvo">
 
-        <div className="topoSecao2">
+        <BannerEstudantes />
 
-            <p className="label2">PÚBLICO-ALVO</p>
+        <div className="relative z-10 mx-auto -mt-28 w-full max-w-5xl px-6 pb-24 md:-mt-36">
 
-            <h2>PENSADO PARA ESTUDANTES</h2>
-
-            <p className="descricao">
-                A solução é voltada para estudantes que utilizam o smartphone
-                como ferramenta de apoio na rotina acadêmica, seja para estudar,
-                registrar conteúdos, realizar trabalhos ou se organizar.
-            </p>
-
-        </div>
-
-        <div className="caixaPrincipal">
-
-            <div className="areaPrincipal">
-
-                <div className="iconeGrande">
-                    <PiStudentBold className="text-[#1683FF]
-  text-[70px]
-  mb-[30px]
-  [text-shadow:0_0_10px_rgba(0,140,255,0.45)]
-  transition-all
-  duration-300
-  ease-in-out"/>
-                </div>
-
-                <div className="textoPrincipal">
-
-                    <h3>ESTUDANTES</h3>
-
-                    <p>
-                        Uma solução desenvolvida para estudantes que
-                        utilizam o smartphone como ferramenta no seu
-                        dia a dia acadêmico.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div className="gridPublico">
+            <div className="grid grid-cols-1 divide-y divide-[#1760B8] overflow-hidden rounded-2xl border border-[#1760B8] bg-deep/90 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-md md:grid-cols-3 md:divide-x md:divide-y-0">
 
                 <PublicoAlvoCard
                     Icone={FaBook}
-                    titulo="ESTUDOS"
+                    cor="text-azure"
+                    titulo="Estudos"
                     texto="Acesso mais rápido e fluido
                         no seus materias de estudo"                
                 />
 
-                 <PublicoAlvoCard
+                <PublicoAlvoCard
                     Icone={FaCamera}
-                    titulo="REGISTROS"
+                    cor="text-[#00B7FF]"
+                    titulo="Registros"
                     texto="Câmera eficiente para
                         fotografar lousas,
                         documentos e atividades."                
@@ -70,12 +34,12 @@ const PublicoAlvo = () => {
 
                 <PublicoAlvoCard
                     Icone={AiFillThunderbolt}
-                    titulo="DESEMPENHO"
+                    cor="text-ice"
+                    titulo="Desempenho"
                     texto="Fluidez para pesquisas,
                         aplicativos e tarefas
                         do dia a dia."                
                 />
-
 
             </div>
 

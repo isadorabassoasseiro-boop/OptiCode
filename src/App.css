@@ -300,24 +300,7 @@ body {
 
 #publico-alvo {
     background-color: #020A1D;
-    padding: 80px 40px 100px;
     font-family: 'Merriweather Sans', sans-serif;
-}
-
-
-.topoSecao2 {
-    max-width: 900px;
-    margin: 0 auto 45px;
-}
-
-
-.topoSecao2 h2 {
-    color: #F1FAEE;
-
-    font-size: 42px;
-    font-weight: 800;
-
-    margin: 0 0 25px;
 }
 
 
@@ -331,127 +314,6 @@ body {
 
     font-size: 18px;
     line-height: 1.65;
-}
-
-
-.caixaPrincipal {
-    max-width: 1120px;
-    margin: 0 auto;
-
-    border: 1px solid #1760B8;
-    border-radius: 18px;
-    overflow: hidden;
-    background-color: #03102A;
-}
-
-
-.areaPrincipal {
-    min-height: 270px;
-    padding: 45px 70px;
-    display: grid;
-
-    grid-template-columns: 320px 1fr;
-    align-items: center;
-    border-bottom: 1px solid #1760B8;
-}
-
-
-.iconeGrande {
-    height: 170px;
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-right: 1px solid #163866;
-}
-
-
-.iconeGrande i {
-    color: #1683FF;
-    font-size: 140px;
-    text-shadow: 0 0 12px rgba(0, 140, 255, 0.55),
-        0 0 30px rgba(0, 140, 255, 0.25);
-}
-
-
-.textoPrincipal {
-    padding-left: 55px;
-}
-
-
-.textoPrincipal h3 {
-    color: #F1FAEE;
-
-    font-size: 30px;
-    font-weight: 800;
-
-    margin: 0 0 20px;
-}
-
-
-.textoPrincipal p {
-    max-width: 570px;
-    margin: 0;
-
-    color: #C4CCE0;
-    font-size: 18px;
-    line-height: 1.65;
-}
-
-
-.gridPublico {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-
-.cardPublico {
-    min-height: auto;
-    padding: 35px 25px;
-    display: flex;
-
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    transition: 0.3s ease;
-}
-
-
-.cardPublico:not(:last-child) {
-    border-right: 1px solid #1760B8;
-}
-
-
-.cardPublico h3 {
-    color: #F1FAEE;
-
-    font-size: 22px;
-    font-weight: 800;
-
-    margin: 0 0 18px;
-}
-
-
-.cardPublico p {
-    color: #C4CCE0;
-
-    font-size: 16px;
-    line-height: 1.55;
-
-    margin: 0;
-}
-
-
-.cardPublico:hover {
-    background-color: #061A3A;
-}
-
-
-.cardPublico:hover i {
-    color: #00B7FF;
-    transform: translateY(-4px);
 }
 
 
@@ -924,28 +786,6 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .areaPrincipal {
-        grid-template-columns: 1fr;
-        padding: 40px;
-        text-align: center;
-    }
-
-    .iconeGrande {
-        border-right: none;
-        border-bottom: 1px solid #163866;
-        padding-bottom: 30px;
-        margin-bottom: 30px;
-        height: auto;
-    }
-
-    .textoPrincipal {
-        padding-left: 0;
-    }
-
-    .textoPrincipal p {
-        margin: 0 auto;
-    }
-
     .gridFotos {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 220px);
@@ -980,19 +820,6 @@ body {
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .topoSecao2 h2 {
-        font-size: 32px;
-    }
-
-    .gridPublico {
-        grid-template-columns: 1fr;
-    }
-
-    .cardPublico:not(:last-child) {
-        border-right: none;
-        border-bottom: 1px solid #1760B8;
     }
 
     .gridFotos {
@@ -1063,19 +890,11 @@ body {
         font-size: 28px;
     }
 
-    .topoSecao2 h2 {
-        font-size: 26px;
-    }
-
     .descricao,
     .descricao2,
     .descricao3,
     .descricao4 {
         font-size: 15px;
-    }
-
-    .iconeGrande i {
-        font-size: 90px;
     }
 
     .gridTime {
@@ -1086,7 +905,6 @@ body {
         padding: 24px;
     }
 
-    #publico-alvo,
     .galeria,
     #equipe,
     #contato {
