@@ -84,7 +84,7 @@ const Hero = () => {
                     <div>
 
                         <h1 className="text-[clamp(54px,8vw,104px)] font-bold leading-[1.02] tracking-[-0.03em] text-[#F5F5F7]">
-                            Smartphone JOVI
+                            Smartphone<br />JOVI
                         </h1>
 
                         <p className="mt-5 text-[clamp(19px,2.4vw,28px)] font-medium text-[#F5F5F7]">
