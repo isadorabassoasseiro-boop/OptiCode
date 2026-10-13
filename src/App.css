@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @import "tailwindcss";
 
@@ -10,7 +9,7 @@
     --color-azure: #2A7FFF;
     --color-ice: #A6F0FF;
 
-    --font-brand: "Poppins", sans-serif;
+    --font-brand: "Merriweather Sans", sans-serif;
 }
 
 
@@ -22,13 +21,33 @@
     --light: #F1FAEE;
     --gray: #B5C1D8;
 
-    --text: 'Montserrat', sans-serif;
-    --logo: 'Poppins', sans-serif;
+    --text: 'Merriweather Sans', sans-serif;
+    --logo: 'Merriweather Sans', sans-serif;
 }
 
 
 * {
     box-sizing: border-box;
+}
+
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+li,
+label,
+button,
+input,
+textarea {
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 
@@ -228,7 +247,7 @@ body {
 
     color: #FFFFFF;
 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
     font-size: 13px;
     font-weight: 700;
     text-decoration: none;
@@ -282,7 +301,7 @@ body {
 #publico-alvo {
     background-color: #020A1D;
     padding: 80px 40px 100px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 
@@ -439,7 +458,7 @@ body {
 .galeria {
     background-color: #020A1D;
     padding: 80px 40px 100px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 
@@ -504,7 +523,7 @@ body {
 #equipe {
     background-color: #020A1D;
     padding: 80px 40px 100px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 
@@ -596,7 +615,7 @@ body {
 #contato {
     background-color: #020A1D;
     padding: 80px 40px 100px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 .topoSecao5 {
@@ -702,7 +721,7 @@ body {
     outline: none;
 
     color: #F1FAEE;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
     font-size: 14px;
 
     transition: 0.3s ease;
@@ -739,7 +758,7 @@ body {
 #footer {
     background-color: #010817;
     border-top: 1px solid #1760B8;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 
