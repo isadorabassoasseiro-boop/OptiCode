@@ -94,7 +94,6 @@ body {
 
 
 .topoSecao2,
-.topoSecao3,
 .topoSecao4,
 .topoSecao5 {
     text-align: center;
@@ -104,7 +103,6 @@ body {
 
 
 .label2,
-.label3,
 .label4,
 .label5 {
     color: #00B7FF;
@@ -116,7 +114,6 @@ body {
 }
 
 
-.topoSecao3 h2,
 .topoSecao4 h2,
 .topoSecao5 h2 {
     color: #F1FAEE;
@@ -135,7 +132,6 @@ body {
 
 
 .descricao,
-.descricao2,
 .descricao3,
 .descricao4 {
     max-width: 780px;
@@ -144,71 +140,6 @@ body {
 
     font-size: 18px;
     line-height: 1.65;
-}
-
-
-.galeria {
-    background-color: #020A1D;
-    padding: 80px 40px 100px;
-    font-family: 'Merriweather Sans', sans-serif;
-}
-
-
-.topoSecao3 {
-    max-width: 900px;
-    margin: 0 auto 45px;
-}
-
-
-.gridFotos {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: repeat(2, 240px);
-
-    gap: 12px;
-}
-
-
-.fotoGrande {
-    grid-row: 1 / 3;
-}
-
-
-.foto {
-    margin: 0;
-    overflow: hidden;
-
-    border: 1px solid #1760B8;
-    border-radius: 14px;
-    background-color: #03102A;
-
-    transition: 0.3s ease;
-}
-
-
-.foto img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-    display: block;
-
-    transition: 0.4s ease;
-}
-
-
-.foto:hover img {
-    transform: scale(1.06);
-}
-
-
-.foto:hover {
-    border-color: #00B7FF;
-    box-shadow: 0 0 20px rgba(0, 140, 255, 0.18);
 }
 
 
@@ -609,16 +540,6 @@ body {
 
     .grid {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .gridFotos {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 220px);
-    }
-
-    .fotoGrande {
-        grid-column: 1 / 3;
-        grid-row: 1 / 2;
     }
 
     .gridTime {
