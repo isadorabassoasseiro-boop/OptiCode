@@ -6,11 +6,11 @@ const BANNER_GALERIA = "./imagens/banner%20galeria.jpg";
 
 // Blocos da lista — as imagens serão adicionadas futuramente.
 const fotos = [
-    { src: null, alt: "Detalhe frontal do JOVI V70" },
-    { src: null, alt: "Detalhe da câmera do JOVI V70" },
-    { src: null, alt: "Detalhe da tela do JOVI V70" },
-    { src: null, alt: "Detalhe lateral do JOVI V70" },
-    { src: null, alt: "Detalhe traseiro do JOVI V70" },
+    { src: "./imagens/joviV70_tela.jpg" , alt: "Detalhe frontal do JOVI V70" },
+    { src: "./imagens/jovi70_camera.jpg" , alt: "Detalhe da câmera do JOVI V70" },
+    // { src: "./imagens/joviV70_mesa.jpg" , alt: "Detalhe da tela do JOVI V70" },
+    { src: "./imagens/joviV70_lateral.jpg" , alt: "Detalhe lateral do JOVI V70" },
+    { src: "./imagens/joviV70_trás_reto.jpg", alt: "Detalhe traseiro do JOVI V70" },
 ];
 
 const Galeria = () => {
