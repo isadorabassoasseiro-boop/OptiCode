@@ -1,16 +1,21 @@
 import { FaRegImage } from "react-icons/fa";
 
-function GaleriaFotos({ src, alt }) {
+function GaleriaFotos({ src, alt, aoClicar }) {
     return (
 
-        <figure className="group relative isolate m-0 aspect-[3/4] w-[65%] flex-none snap-center overflow-hidden rounded-2xl border border-[#334155] bg-deep md:w-[calc((100%-2rem)/3)]">
+        <button
+            type="button"
+            onClick={aoClicar}
+            aria-label={`Ampliar imagem: ${alt}`}
+            className="group relative isolate m-0 aspect-[3/4] w-[65%] flex-none snap-center cursor-pointer overflow-hidden rounded-2xl border border-transparent bg-deep outline-none focus-visible:ring-2 focus-visible:ring-white/40 md:w-[calc((100%-2rem)/3)]"
+        >
 
             {/* Camada de mídia — amplia no hover para visualizar melhor a imagem */}
             <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.06]">
                 {src ? (
                     <img
                         src={src}
-                        alt={alt}
+                        alt=""
                         draggable="false"
                         className="pointer-events-none h-full w-full select-none object-cover"
                     />
@@ -25,7 +30,7 @@ function GaleriaFotos({ src, alt }) {
                 )}
             </div>
 
-        </figure>
+        </button>
 
     )
 }

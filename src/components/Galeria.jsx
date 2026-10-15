@@ -1,22 +1,24 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import GaleriaFotos from "./GaleriaFotos";
+import GaleriaModal from "./GaleriaModal";
 
 // Banner de fundo da seção de galeria.
 const BANNER_GALERIA = "./imagens/banner%20galeria.jpg";
 
 // Blocos da lista — as imagens serão adicionadas futuramente.
 const fotos = [
-    { src: "./imagens/joviV70_tela.jpg" , alt: "Detalhe frontal do JOVI V70" },
-    { src: "./imagens/jovi70_camera.jpg" , alt: "Detalhe da câmera do JOVI V70" },
-    // { src: "./imagens/joviV70_mesa.jpg" , alt: "Detalhe da tela do JOVI V70" },
-    { src: "./imagens/joviV70_lateral.jpg" , alt: "Detalhe lateral do JOVI V70" },
+    { src: "./imagens/joviV70_tela.jpg", alt: "Detalhe frontal do JOVI V70" },
+    { src: "./imagens/jovi70_camera.jpg", alt: "Detalhe da câmera do JOVI V70" },
+    // { src: "./imagens/joviV70_mesa.jpg", alt: "Detalhe da tela do JOVI V70" },
+    { src: "./imagens/joviV70_lateral.jpg", alt: "Detalhe lateral do JOVI V70" },
     { src: "./imagens/joviV70_trás_reto.jpg", alt: "Detalhe traseiro do JOVI V70" },
 ];
 
 const Galeria = () => {
 
     const listaRef = useRef(null);
-    const arrasto = useRef({ ativo: false, inicioX: 0, rolagemInicial: 0 });
+    const arrasto = useRef({ ativo: false, capturado: false, movido: false, inicioX: 0, rolagemInicial: 0 });
+    const [fotoAtiva, setFotoAtiva] = useState(null);
 
     // Arraste com o mouse para revelar os próximos blocos (no toque vale a rolagem nativa).
     const iniciarArrasto = (e) => {
@@ -24,22 +26,43 @@ const Galeria = () => {
 
         arrasto.current = {
             ativo: true,
+            capturado: false,
+            movido: false,
             inicioX: e.clientX,
             rolagemInicial: listaRef.current.scrollLeft,
         };
-
-        listaRef.current.setPointerCapture(e.pointerId);
     };
 
     const arrastar = (e) => {
         if (!arrasto.current.ativo || !listaRef.current) return;
 
         const deslocamento = e.clientX - arrasto.current.inicioX;
-        listaRef.current.scrollLeft = arrasto.current.rolagemInicial - deslocamento;
+
+        // Só vira arrasto (e captura o ponteiro) após um pequeno deslocamento,
+        // para que um simples clique ainda abra o modal.
+        if (!arrasto.current.capturado && Math.abs(deslocamento) > 5) {
+            arrasto.current.capturado = true;
+            listaRef.current.setPointerCapture(e.pointerId);
+        }
+
+        if (arrasto.current.capturado) {
+            arrasto.current.movido = true;
+            listaRef.current.scrollLeft = arrasto.current.rolagemInicial - deslocamento;
+        }
     };
 
     const encerrarArrasto = () => {
         arrasto.current.ativo = false;
+    };
+
+    // Ignora o clique gerado após um arrasto, para não abrir o modal sem querer.
+    const abrirModal = (indice) => {
+        if (arrasto.current.movido) {
+            arrasto.current.movido = false;
+            return;
+        }
+
+        setFotoAtiva(indice);
     };
 
     return (
@@ -75,14 +98,28 @@ const Galeria = () => {
                     onPointerCancel={encerrarArrasto}
                     className="mt-12 flex cursor-grab snap-x snap-mandatory select-none gap-4 overflow-x-auto px-[17.5%] [-webkit-mask-image:linear-gradient(to_right,transparent,black_10%,black_80%,transparent)] [mask-image:linear-gradient(to_right,transparent,black_10%,black_80%,transparent)] [scrollbar-width:none] active:cursor-grabbing md:snap-none md:px-0 [&::-webkit-scrollbar]:hidden"
                 >
-                    {fotos.map((foto) => (
-                        <GaleriaFotos key={foto.alt} src={foto.src} alt={foto.alt} />
+                    {fotos.map((foto, indice) => (
+                        <GaleriaFotos
+                            key={foto.alt}
+                            src={foto.src}
+                            alt={foto.alt}
+                            aoClicar={() => abrirModal(indice)}
+                        />
                     ))}
                 </div>
 
             </div>
 
         </div>
+
+        {/* Modal com a imagem ampliada — aberto ao clicar em um bloco */}
+        {fotoAtiva !== null && (
+            <GaleriaModal
+                src={fotos[fotoAtiva].src}
+                alt={fotos[fotoAtiva].alt}
+                aoFechar={() => setFotoAtiva(null)}
+            />
+        )}
 
     </section>
     )
