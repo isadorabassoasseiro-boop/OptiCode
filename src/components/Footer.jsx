@@ -34,27 +34,27 @@ const Footer = () => {
         <FooterColuna titulo="NAVEGAÇÃO">
 
           <FooterLink
-            href="#inicio"
+            to="/"
             texto="Início"
           />
 
           <FooterLink
-            href="#solucao"
+            to="/sobre"
             texto="Solução"
           />
 
           <FooterLink
-            href="#publico-alvo"
+            to="/sobre"
             texto="Público-Alvo"
           />
 
           <FooterLink
-            href="#galerias"
+            to="/"
             texto="Galeria"
           />
 
           <FooterLink
-            href="#equipe"
+            to="/suporte"
             texto="Nossa Equipe"
           />
 
@@ -64,17 +64,17 @@ const Footer = () => {
         <FooterColuna titulo="PROJETO">
 
           <FooterLink
-            href="#solucao"
+            to="/sobre"
             texto="Nossa Solução"
           />
 
           <FooterLink
-            href="#publico-alvo"
+            to="/sobre"
             texto="Estudantes"
           />
 
           <FooterLink
-            href="#galerias"
+            to="/"
             texto="Smartphone JOVI"
           />
 
