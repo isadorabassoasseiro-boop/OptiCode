@@ -1,9 +1,11 @@
-function FooterLink({ href, texto }) {
+import { Link } from "react-router-dom";
+
+function FooterLink({ to, texto }) {
   return (
     <li>
-      <a href={href}>
+      <Link to={to}>
         {texto}
-      </a>
+      </Link>
     </li>
   );
 }

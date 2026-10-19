@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react"
+import { Link } from "react-router-dom"
 import { FaBars, FaXmark, FaMagnifyingGlass } from "react-icons/fa6"
 import HeaderLink from "./HeaderLink"
 
@@ -26,8 +27,8 @@ const Header = () => {
 
                 {/* Logo — canto esquerdo */}
                 <div className="flex flex-1 items-center">
-                    <a
-                        href="#inicio"
+                    <Link
+                        to="/"
                         onClick={fecharMenu}
                         aria-label="OptiCode — Home"
                         className="flex items-center"
@@ -37,7 +38,7 @@ const Header = () => {
                             alt="OptiCode"
                             className="h-8 w-auto md:h-9"
                         />
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Navegação — centro */}
@@ -45,9 +46,9 @@ const Header = () => {
                     id="linksMenu"
                     className={`${menuAberto ? "flex" : "hidden"} absolute inset-x-0 top-16 flex-col items-center gap-1 border-t border-white/10 bg-neutral-900/90 px-6 py-5 shadow-md backdrop-blur-lg md:static md:flex md:flex-row md:items-center md:gap-10 md:border-0 md:bg-transparent md:p-0 md:shadow-none md:backdrop-blur-none`}
                 >
-                    <HeaderLink href="#inicio" texto="Home" onClick={fecharMenu} />
-                    <HeaderLink href="#contato" texto="Suporte" onClick={fecharMenu} />
-                    <HeaderLink href="#equipe" texto="Sobre" onClick={fecharMenu} />
+                    <HeaderLink to="/" texto="Home" onClick={fecharMenu} />
+                    <HeaderLink to="/suporte" texto="Suporte" onClick={fecharMenu} />
+                    <HeaderLink to="/sobre" texto="Sobre" onClick={fecharMenu} />
                 </ul>
 
                 {/* Pesquisa expansível + menu mobile — canto direito */}
