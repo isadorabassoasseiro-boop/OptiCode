@@ -162,18 +162,9 @@ const Equipe = () => {
         <section id="equipe" className="scroll-mt-16 bg-night pb-24 pt-20">
 
             <div className="mx-auto mb-12 max-w-3xl px-6 text-center md:px-10">
-                <p className="mb-5 text-sm font-semibold tracking-[0.25em] text-azure">
-                    NOSSA EQUIPE
-                </p>
-
                 <h2 className="text-3xl font-extrabold text-ice md:text-4xl">
                     QUEM ESTÁ POR TRÁS DA OPTICODE
                 </h2>
-
-                <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-ice/70 md:text-lg">
-                    Conheça os integrantes responsáveis pelo desenvolvimento
-                    da nossa solução.
-                </p>
             </div>
 
             {/* Carrossel em tela cheia com loop infinito */}

@@ -1,6 +1,6 @@
 function EquipeCard ({src,alt,titulo,funcao,textoTime}){
     return(
-        <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-navy/50 bg-deep transition-colors duration-300 hover:border-azure/60">
+        <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-deep">
 
             <div className="aspect-[3/2] overflow-hidden">
                 <img
