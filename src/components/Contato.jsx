@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
-import { IoLocationOutline } from "react-icons/io5";
+import { IoLocationOutline, IoSend } from "react-icons/io5";
 import { GoClock } from "react-icons/go";
 import { FaArrowRight } from "react-icons/fa6";
 import ContatoItem from "./ContatoItem";
@@ -56,18 +56,18 @@ const Contato = () => {
     };
 
     return (
-        <section id="contato" className="scroll-mt-16 bg-black px-6 pb-24 pt-20 md:px-10">
+        <section id="contato" className="scroll-mt-16 bg-black px-5 pb-16 pt-12 md:px-10 lg:pb-24 lg:pt-20">
 
             {/* Cabeçalho — centralizado nas duas versões */}
-            <header className="mx-auto mb-10 max-w-3xl text-center">
+            <header className="mx-auto mb-8 max-w-3xl text-center lg:mb-9">
 
-                <p className="mb-4 text-sm font-semibold tracking-[0.25em] text-white lg:text-white/70">CONTATO</p>
+                <p className="mb-2 text-[0.65rem] font-semibold tracking-[0.3em] text-azure lg:mb-3 lg:text-xs lg:text-white/70">CONTATO</p>
 
-                <h2 className="text-3xl font-extrabold text-white md:text-4xl lg:text-ice">
+                <h2 className="text-2xl font-extrabold text-white sm:text-3xl lg:text-4xl lg:text-ice">
                     FALE COM A NOSSA EQUIPE
                 </h2>
 
-                <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/80">
+                <p className="mx-auto mt-2 max-w-xl text-xs leading-relaxed text-ice/90 sm:text-sm lg:mt-4 lg:text-base lg:text-white/80">
                     Tem alguma dúvida sobre a OPTICODE ou sobre nossa solução?
                     Entre em contato com a nossa equipe.
                 </p>
@@ -76,19 +76,19 @@ const Contato = () => {
 
             {/* MOBILE: uma coluna (informações em cima, formulário embaixo) */}
             {/* DESKTOP (lg+): duas colunas (formulário à esquerda, informações à direita) */}
-            <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14">
+            <div className="mx-auto grid w-full max-w-[58rem] grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-11">
 
                 {/* Informações — primeiro no mobile, à direita no desktop */}
                 <div className="min-w-0 lg:order-2">
 
-                    <h3 className="text-2xl font-extrabold text-white">ENTRE EM CONTATO</h3>
+                    <h3 className="text-lg font-extrabold text-white lg:text-2xl">ENTRE EM CONTATO</h3>
 
-                    <p className="mt-4 text-sm leading-relaxed text-white/80">
+                    <p className="mt-2 text-xs leading-relaxed text-white/80 lg:mt-4 lg:text-sm">
                         Estamos disponíveis para responder dúvidas,
                         receber sugestões e conversar sobre o projeto.
                     </p>
 
-                    <address className="mt-10 flex flex-col gap-7 not-italic">
+                    <address className="mt-5 flex flex-col gap-3 not-italic lg:mt-8 lg:gap-5">
 
                         <ContatoItem
                             Icone={MdOutlineEmail}
@@ -118,7 +118,7 @@ const Contato = () => {
                 {/* Formulário — abaixo das informações no mobile, à esquerda no desktop */}
                 <form
                     onSubmit={aoEnviar}
-                    className="flex min-w-0 flex-col gap-5 rounded-2xl border border-neutral-800 bg-neutral-900 p-6 md:p-8 lg:order-1"
+                    className="flex min-w-0 flex-col gap-4 rounded-xl border border-neutral-800 bg-neutral-900 p-5 lg:order-1 lg:gap-5 lg:rounded-2xl lg:p-7"
                 >
 
                     <ContatoForm
@@ -153,16 +153,18 @@ const Contato = () => {
                         textarea={true}
                     />
 
-                    {/* Largura total no mobile, tamanho do conteúdo no desktop */}
+                    {/* Botão do tamanho do conteúdo nas duas versões */}
                     <button
                         type="submit"
                         disabled={enviando}
-                        className="mt-1 flex w-full items-center justify-center gap-2 rounded-lg bg-azure px-6 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:shadow-lg hover:shadow-azure/30 disabled:cursor-not-allowed disabled:opacity-60 lg:w-fit"
+                        className="mt-1 flex w-fit items-center justify-center gap-2 rounded-md bg-azure px-5 py-2.5 text-xs font-bold text-white transition-all duration-300 hover:shadow-lg hover:shadow-azure/30 disabled:cursor-not-allowed disabled:opacity-60 lg:rounded-lg lg:py-3 lg:text-sm"
                     >
 
                         {enviando ? "ENVIANDO..." : "ENVIAR MENSAGEM"}
 
-                        <FaArrowRight/>
+                        {/* Ícone de envio no mobile, seta no desktop */}
+                        <IoSend className="lg:hidden"/>
+                        <FaArrowRight className="hidden lg:block"/>
 
                     </button>
 
