@@ -78,7 +78,7 @@ const PublicoAlvo = () => {
                 className="absolute inset-0 flex items-center justify-center px-6 will-change-transform"
             >
 
-                <div className="grid w-full max-w-5xl grid-cols-1 divide-y divide-[#334155] overflow-hidden rounded-2xl border border-[#334155] bg-deep/40 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-sm md:grid-cols-3 md:divide-x md:divide-y-0">
+                <div className="flex w-full max-w-5xl flex-col divide-y divide-[#334155] overflow-hidden rounded-2xl border border-[#334155] bg-deep/40 shadow-[0_18px_40px_rgba(0,0,0,0.35)] backdrop-blur-sm md:flex-row md:divide-x md:divide-y-0">
 
                     <PublicoAlvoCard
                         Icone={FaBook}

@@ -6,7 +6,7 @@ function PublicoAlvoCard ({Icone, titulo, texto}) {
     const [ativo, setAtivo] = useState(false);
 
     return(
-        <article className={`group relative h-40 overflow-hidden text-center transition-colors duration-300 ease-in-out md:h-44 ${ativo ? "bg-navy/25" : "hover:bg-navy/25"}`}>
+        <article className={`group relative h-40 w-full overflow-hidden text-center transition-colors duration-300 ease-in-out md:h-44 md:flex-1 ${ativo ? "bg-navy/25" : "hover:bg-navy/25"}`}>
 
             {/* Clique reservado para o mobile (hover assume no desktop) */}
             <button
