@@ -7,7 +7,7 @@ function GaleriaFotos({ src, alt, aoClicar }) {
             type="button"
             onClick={aoClicar}
             aria-label={`Ampliar imagem: ${alt}`}
-            className="group relative isolate m-0 aspect-[3/4] w-[65%] flex-none snap-center cursor-pointer overflow-hidden rounded-2xl border border-transparent bg-deep outline-none focus-visible:ring-2 focus-visible:ring-white/40 md:w-[calc((100%-2rem)/3)]"
+            className="group relative isolate m-0 aspect-[3/4] w-[80vw] flex-none snap-center cursor-pointer overflow-hidden rounded-2xl border border-transparent bg-deep outline-none focus-visible:ring-2 focus-visible:ring-white/40 md:w-[calc((100%-2rem)/3)]"
         >
 
             {/* Camada de mídia — amplia no hover para visualizar melhor a imagem */}

@@ -74,7 +74,7 @@ const Galeria = () => {
             <img
                 src={BANNER_GALERIA}
                 alt=""
-                className="h-full w-full object-cover object-center"
+                className="h-full w-full object-cover object-right md:object-center"
             />
             <div className="absolute inset-0 bg-linear-to-r from-night/95 via-night/70 to-night/20" />
         </div>
@@ -96,7 +96,7 @@ const Galeria = () => {
                     onPointerMove={arrastar}
                     onPointerUp={encerrarArrasto}
                     onPointerCancel={encerrarArrasto}
-                    className="mt-12 flex cursor-grab snap-x snap-mandatory select-none gap-4 overflow-x-auto px-[17.5%] [-webkit-mask-image:linear-gradient(to_right,transparent,black_10%,black_80%,transparent)] [mask-image:linear-gradient(to_right,transparent,black_10%,black_80%,transparent)] [scrollbar-width:none] active:cursor-grabbing md:snap-none md:px-0 [&::-webkit-scrollbar]:hidden"
+                    className="-mx-6 mt-12 flex cursor-grab snap-x snap-mandatory select-none gap-4 overflow-x-auto px-[10vw] [-webkit-mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [scrollbar-width:none] active:cursor-grabbing md:mx-0 md:snap-none md:px-0 md:[-webkit-mask-image:linear-gradient(to_right,transparent,black_10%,black_80%,transparent)] md:[mask-image:linear-gradient(to_right,transparent,black_10%,black_80%,transparent)] [&::-webkit-scrollbar]:hidden"
                 >
                     {fotos.map((foto, indice) => (
                         <GaleriaFotos
