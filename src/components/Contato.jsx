@@ -81,9 +81,9 @@ const Contato = () => {
                 {/* Informações — primeiro no mobile, à direita no desktop */}
                 <div className="min-w-0 lg:order-2">
 
-                    <h3 className="text-lg font-extrabold text-white lg:text-2xl">ENTRE EM CONTATO</h3>
+                    <h3 className="text-center text-lg font-extrabold text-white lg:text-left lg:text-2xl">ENTRE EM CONTATO</h3>
 
-                    <p className="mt-2 text-xs leading-relaxed text-white/80 lg:mt-4 lg:text-sm">
+                    <p className="mt-2 text-center text-xs leading-relaxed text-white/80 lg:mt-4 lg:text-left lg:text-sm">
                         Estamos disponíveis para responder dúvidas,
                         receber sugestões e conversar sobre o projeto.
                     </p>

@@ -1,6 +1,6 @@
 function ContatoItem ({Icone,titulo,texto}) {
     return(
-        <div className="flex flex-col items-start gap-3 lg:flex-row lg:items-center lg:gap-4">
+        <div className="flex flex-col items-center gap-3 text-center lg:flex-row lg:gap-4 lg:text-left">
 
             {/* Ícone azul e menor no mobile, branco e maior no desktop */}
             <span className="flex h-8 w-8 shrink-0 items-center justify-center text-2xl text-azure lg:h-10 lg:w-10 lg:text-3xl lg:text-white">
