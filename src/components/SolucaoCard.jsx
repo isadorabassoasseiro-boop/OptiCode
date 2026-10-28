@@ -1,10 +1,22 @@
+import { useState } from "react"
+
 function SolucaoCard({ titulo, texto, imagem, className = "" }) {
+    const [informacoesAbertas, setInformacoesAbertas] = useState(false)
+
+    const alternarInformacoes = () => {
+        if (window.matchMedia("(hover: none)").matches) {
+            setInformacoesAbertas((abertas) => !abertas)
+        }
+    }
+
     return (
         <article
-            className={`group relative isolate overflow-hidden rounded-2xl bg-deep ${className}`}
+            className={`group relative isolate cursor-pointer overflow-hidden rounded-2xl bg-deep ${className}`}
+            onClick={alternarInformacoes}
+            aria-expanded={informacoesAbertas}
         >
             {/* Camada de mídia — escala suave no hover (efeito de seleção) */}
-            <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.06]">
+            <div className={`absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.06] ${informacoesAbertas ? "scale-[1.06]" : ""}`}>
                 {imagem ? (
                     <img
                         src={imagem}
@@ -28,7 +40,7 @@ function SolucaoCard({ titulo, texto, imagem, className = "" }) {
             </div>
 
             {/* Card de informações — sobe de baixo no hover cobrindo a imagem */}
-            <div className="absolute inset-0 z-20 flex translate-y-full flex-col justify-end gap-2 bg-neutral-900/70 p-5 backdrop-blur-lg transition-transform duration-500 ease-out group-hover:translate-y-0">
+            <div className={`absolute inset-0 z-20 flex flex-col justify-end gap-2 bg-neutral-900/70 p-5 backdrop-blur-lg transition-transform duration-500 ease-out group-hover:translate-y-0 ${informacoesAbertas ? "translate-y-0" : "translate-y-full"}`}>
                 <h3 className="font-brand text-base font-semibold uppercase tracking-[0.12em] text-ice">
                     {titulo}
                 </h3>

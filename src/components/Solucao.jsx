@@ -15,7 +15,7 @@ const Solucao = () => {
 
             {/* Grid 3 colunas: 2 cards à esquerda, 1 em foco no centro
                 (ocupando as duas linhas) e 2 cards à direita */}
-            <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 md:auto-rows-[300px] md:grid-cols-3">
+            <div className="mx-auto flex w-full max-w-6xl flex-col gap-4">
 
                 <SolucaoCard
                     className="min-h-[260px]"
@@ -26,7 +26,7 @@ const Solucao = () => {
                 />
 
                 <SolucaoCard
-                    className="min-h-[380px] md:row-span-2"
+                    className="min-h-[380px]"
                     imagem="./imagens/camera.jpg"
                     titulo="Fotografia"
                     texto="Assistência fotográfica integrada que estabiliza o software,
