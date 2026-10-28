@@ -10,7 +10,7 @@ conduzidas pela rolagem.
 
 ---
 
-## 🚀 Como rodar o projeto
+##  Como rodar o projeto
 
 ### Pré-requisitos
 
@@ -62,7 +62,7 @@ conduzidas pela rolagem.
 
 ---
 
-## 🌐 Deploy (Vercel)
+##  Deploy (Vercel)
 
 > **Link do site:** _aguardando deploy_
 >
@@ -73,7 +73,7 @@ conduzidas pela rolagem.
 
 ---
 
-## 🧱 Tecnologias utilizadas
+##  Tecnologias utilizadas
 
 | Tecnologia                          | Uso no projeto                                   |
 | ----------------------------------- | ------------------------------------------------ |
@@ -86,7 +86,7 @@ conduzidas pela rolagem.
 
 ---
 
-## 📁 Estrutura de pastas
+##  Estrutura de pastas
 
 ```
 OptiCode/
@@ -129,7 +129,7 @@ OptiCode/
 
 ---
 
-## 🧭 Como o projeto funciona
+##  Como o projeto funciona
 
 ### Rotas e layout compartilhado
 
@@ -237,7 +237,7 @@ OptiCode/
 
 ---
 
-## 📄 Documentação adicional
+##  Documentação adicional
 
 A pasta [`docs/`](./docs/README.md) registra o redesign do site parte a parte
 (hero, header, páginas/rotas, footer, paleta de cores), com capturas e as
@@ -246,7 +246,7 @@ alguma seção para manter a consistência.
 
 ---
 
-## 👥 Integrantes do grupo
+##  Integrantes do grupo
 
 Nomes e RMs completos estão em [`INTEGRANTES.txt`](./INTEGRANTES.txt):
 
