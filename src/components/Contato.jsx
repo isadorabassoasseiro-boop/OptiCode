@@ -76,7 +76,7 @@ const Contato = () => {
 
             {/* MOBILE: uma coluna (informações em cima, formulário embaixo) */}
             {/* DESKTOP (lg+): duas colunas (formulário à esquerda, informações à direita) */}
-            <div className="mx-auto grid w-full max-w-[58rem] grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-11">
+            <div className="mx-auto flex w-full max-w-[58rem] flex-col gap-12 lg:grid lg:grid-cols-2 lg:gap-11">
 
                 {/* Informações — primeiro no mobile, à direita no desktop */}
                 <div className="min-w-0 lg:order-2">
