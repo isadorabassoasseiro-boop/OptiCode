@@ -85,47 +85,14 @@ body {
 
 
 
-.botao {
-    width: fit-content;
-    padding: 14px 25px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
-    background-color: #1683FF;
-    border: none;
-    border-radius: 7px;
-
-    color: #FFFFFF;
-
-    font-family: 'Merriweather Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-
-.botao:hover {
-    background-color: #00B7FF;
-    transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(0, 183, 255, 0.25);
-}
-
-
-.topoSecao2,
-.topoSecao5 {
+.topoSecao2 {
     text-align: center;
     max-width: 900px;
     margin: 0 auto 50px;
 }
 
 
-.label2,
-.label5 {
+.label2 {
     color: #00B7FF;
 
     font-size: 18px;
@@ -135,24 +102,13 @@ body {
 }
 
 
-.topoSecao5 h2 {
-    color: #F1FAEE;
-
-    font-size: 36px;
-    font-weight: 800;
-
-    margin: 0;
-}
-
-
 #publico-alvo {
     background-color: #020A1D;
     font-family: 'Merriweather Sans', sans-serif;
 }
 
 
-.descricao,
-.descricao4 {
+.descricao {
     max-width: 780px;
     margin: 0 auto;
     color: #C4CCE0;
@@ -162,159 +118,10 @@ body {
 }
 
 
-#contato {
-    background-color: #020A1D;
-    padding: 80px 40px 100px;
-    font-family: 'Merriweather Sans', sans-serif;
-}
-
-.topoSecao5 {
-    max-width: 900px;
-    margin: 0 auto 50px;
-}
-
-.caixaContato {
-    max-width: 1100px;
-
-    margin: 0 auto;
-    padding: 50px;
-
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-
-    background-color: #03102A;
-    border: 1px solid #1760B8;
-    border-radius: 18px;
-}
-
-.infoContato h3 {
-    color: #F1FAEE;
-
-    font-size: 24px;
-    font-weight: 800;
-
-    margin: 0 0 15px;
-}
-
-
-.textoContato {
-    color: #C4CCE0;
-
-    font-size: 14px;
-    line-height: 1.6;
-
-    margin: 0 0 40px;
-}
-
-.listaContato {
-    font-style: normal;
-    display: block;
-}
-
-.itemContato {
-    display: flex;
-    align-items: center;
-
-    gap: 18px;
-    margin-bottom: 30px;
-}
-
-.itemContato h4 {
-    color: #F1FAEE;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    margin: 0 0 6px;
-}
-
-
-.itemContato p {
-    color: #C4CCE0;
-    font-size: 13px;
-    margin: 0;
-}
-
-.formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-
-.grupoForm {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-
-.grupoForm label {
-    color: #F1FAEE;
-
-    font-size: 13px;
-    font-weight: 600;
-}
-
-
-.grupoForm input,
-.grupoForm textarea {
-    width: 100%;
-    padding: 14px 16px;
-
-    box-sizing: border-box;
-    background-color: #020A1D;
-    border: 1px solid #1760B8;
-    border-radius: 8px;
-
-    outline: none;
-
-    color: #F1FAEE;
-    font-family: 'Merriweather Sans', sans-serif;
-    font-size: 14px;
-
-    transition: 0.3s ease;
-}
-
-
-.grupoForm textarea {
-    resize: vertical;
-}
-
-
-.grupoForm input::placeholder,
-.grupoForm textarea::placeholder {
-    color: #697994;
-}
-
-.grupoForm input:focus,
-.grupoForm textarea:focus {
-    border-color: #00B7FF;
-
-    box-shadow:
-        0 0 10px rgba(0, 183, 255, 0.15);
-}
-
-.formulario .botao {
-    align-self: flex-start;
-}
-
-.formulario .botao i {
-    font-size: 18px;
-}
-
-
 @media (max-width: 1024px) {
 
     .grid {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .caixaContato {
-        grid-template-columns: 1fr;
-        padding: 40px;
-        gap: 40px;
     }
 }
 
@@ -339,28 +146,16 @@ body {
 
 @media (max-width: 480px) {
 
-    .botao {
-        width: 100%;
-        text-align: center;
-    }
-
-    .topoSecao3 h2,
-    .topoSecao5 h2 {
+    .topoSecao3 h2 {
         font-size: 28px;
     }
 
     .descricao,
-    .descricao2,
-    .descricao4 {
+    .descricao2 {
         font-size: 15px;
     }
 
-    .caixaContato {
-        padding: 24px;
-    }
-
-    .galeria,
-    #contato {
+    .galeria {
         padding: 60px 20px 70px;
     }
 }
