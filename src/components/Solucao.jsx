@@ -15,7 +15,7 @@ const Solucao = () => {
 
             {/* Grid 3 colunas: 2 cards à esquerda, 1 em foco no centro
                 (ocupando as duas linhas) e 2 cards à direita */}
-            <div className="mx-auto flex w-full max-w-6xl flex-col gap-4">
+            <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 lg:grid lg:grid-cols-3">
 
                 <SolucaoCard
                     className="min-h-[260px]"
@@ -26,7 +26,7 @@ const Solucao = () => {
                 />
 
                 <SolucaoCard
-                    className="min-h-[380px]"
+                    className="min-h-[380px] lg:row-span-2"
                     imagem="./imagens/camera.jpg"
                     titulo="Fotografia"
                     texto="Assistência fotográfica integrada que estabiliza o software,
