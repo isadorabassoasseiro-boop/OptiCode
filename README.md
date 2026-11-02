@@ -69,7 +69,7 @@ conduzidas pela rolagem.
 > <!-- 🔗 Cole aqui a URL definitiva assim que o projeto subir para a Vercel,
 >      ex.: https://opticode.vercel.app -->
 >
-> `____________________________________________`
+> (https://opti-code-ye7w.vercel.app/)
 
 ---
 
